@@ -4275,12 +4275,13 @@ node[pos=0.05, below]{$\ga$};
  }
  
  \newcommand\mysmallbowtie{\text{\tiny $\bowtie$}}
+ 
  \newcommand\MacroTikzDFourClustersTriangle[1]{
-  \begin{scope}[very thick]
+  \begin{scope}[thick]
  \draw ($(L)+(#1)$) -- ($(R)+(#1)$) -- ($(top)+(#1)$) -- ($(L)+(#1)$);
-\draw [fill=violet] ($(P)+(#1)$) circle (.1); %puncture
+\draw [fill=violet] ($(P)+(#1)$) circle (.08); %puncture
  \end{scope}
- } % CURRENT
+ } 
  
 \newcommand\MacroTikzDNorth{
 \MacroTikzDFourClustersTriangle{north}
@@ -4290,81 +4291,90 @@ node[pos=0.05, below]{$\ga$};
  
  \newcommand\MacroTikzDWest{
 \MacroTikzDFourClustersTriangle{west}
-\draw ($(P)+(west)$) -- node[sloped,rotate=90,pos=0.2]{$\mysmallbowtie$}  ($(R)+(west)$);
-\draw[rounded corners=10pt] ($(L)+(west)$) -- ($(0,\TikzH*0.5)+(west)$) -- ($(R)+(west)$);
-\draw[rounded corners=10pt] ($(R)+(west)$) -- ($(P)+(west)+(0,-0.6)$) -- ($(P)+(west)$);
+\draw[magenta] ($(P)+(west)$) -- node[sloped,rotate=90,pos=0.2]{$\mysmallbowtie$}  ($(R)+(west)$);
+\draw[rounded corners=10pt, brown] ($(L)+(west)$) -- ($(0,\TikzH*0.5)+(west)$) -- ($(R)+(west)$);
+\draw[rounded corners=10pt, blue] ($(R)+(west)$) -- ($(P)+(west)+(0,-0.6)$) -- ($(P)+(west)$);
  }
  \newcommand\MacroTikzDEast{
 \MacroTikzDFourClustersTriangle{east}
-\draw ($(L)+(east)$) -- node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$} ($(P)+(east)$) ;
-\draw[rounded corners=10pt] ($(L)+(east)$) -- ($(0,\TikzH*0.5)+(east)$) -- ($(R)+(east)$);
-\draw[rounded corners=10pt] ($(L)+(east)$) -- ($(P)+(east)+(0,-0.6)$) -- ($(P)+(east)$);
+\draw[green] ($(L)+(east)$) -- node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$} ($(P)+(east)$) ;
+\draw[brown] [rounded corners=10pt] ($(L)+(east)$) -- ($(0,\TikzH*0.5)+(east)$) -- ($(R)+(east)$);
+\draw[rounded corners=10pt, red] ($(L)+(east)$) -- ($(P)+(east)+(0,-0.6)$) -- ($(P)+(east)$);
  }
  
  
  \newcommand\MacroTikzDBelowNorth{
  \MacroTikzDFourClustersTriangle{belownorth}
-\draw  ($(L)+(belownorth)$)  --  ($(P)+(belownorth)$) --  ($(top)+(belownorth)$)  ($(P)+(belownorth)$) -- ($(R)+(belownorth)$);
+\draw[red]  ($(L)+(belownorth)$)  --  ($(P)+(belownorth)$);
+\draw[olive] ($(P)+(belownorth)$) --  ($(top)+(belownorth)$) ; 
+\draw[blue] ($(P)+(belownorth)$) -- ($(R)+(belownorth)$);
  }
  
   
   % left diamond begins
   \newcommand\MacroTikzDleftdiamondNorth{
  \MacroTikzDFourClustersTriangle{leftdiamondNorth}
-\draw  ($(R)+(leftdiamondNorth)$)  --  ($(P)+(leftdiamondNorth)$) --  ($(top)+(leftdiamondNorth)$) ;
-\draw[rounded corners=15pt] ($(R)+(leftdiamondNorth)$) -- ($(-0.6,-0.6)+(leftdiamondNorth)$) -- ($(top)+(leftdiamondNorth)$);
+\draw[blue]  ($(R)+(leftdiamondNorth)$)  --  ($(P)+(leftdiamondNorth)$);
+\draw[olive] ($(P)+(leftdiamondNorth)$) --  ($(top)+(leftdiamondNorth)$) ;
+\draw[rounded corners=15pt, orange] ($(R)+(leftdiamondNorth)$) -- ($(-0.6,-0.6)+(leftdiamondNorth)$) -- ($(top)+(leftdiamondNorth)$);
  }
  \newcommand\MacroTikzDleftdiamondWest{
  \MacroTikzDFourClustersTriangle{leftdiamondWest}
-\draw  ($(R)+(leftdiamondWest)$)  -- node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$}  ($(P)+(leftdiamondWest)$);
-\draw[rounded corners=20pt] ($(R)+(leftdiamondWest)$) -- ($(-0.8,-1)+(leftdiamondWest)$) -- ($(top)+(leftdiamondWest)$);
-\draw[rounded corners=10pt] ($(R)+(leftdiamondWest)$) -- ($(P)+(leftdiamondWest)+(0,-0.6)$) -- ($(P)+(leftdiamondWest)$);
+\draw [magenta] ($(R)+(leftdiamondWest)$)  -- node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$}  ($(P)+(leftdiamondWest)$);
+\draw[rounded corners=20pt, orange] ($(R)+(leftdiamondWest)$) -- ($(-0.8,-1)+(leftdiamondWest)$) -- ($(top)+(leftdiamondWest)$);
+\draw[rounded corners=10pt, blue] ($(R)+(leftdiamondWest)$) -- ($(P)+(leftdiamondWest)+(0,-0.6)$) -- ($(P)+(leftdiamondWest)$);
  }
 \newcommand\MacroTikzDleftdiamondEast{
  \MacroTikzDFourClustersTriangle{leftdiamondEast}
-\draw  ($(P)+(leftdiamondEast)$) --  node[pos=0.25]{$\mysmallbowtie$} ($(top)+(leftdiamondEast)$) ;
-\draw[rounded corners=15pt] ($(R)+(leftdiamondEast)$) -- ($(-0.6,-0.6)+(leftdiamondEast)$) -- ($(top)+(leftdiamondEast)$);
- \draw[rounded corners=10pt] ($(top)+(leftdiamondEast)$) -- ($(P)+(leftdiamondEast)+(0.5,0)$) -- ($(P)+(leftdiamondEast)$);
+\draw[gray]  ($(P)+(leftdiamondEast)$) --  node[pos=0.25]{$\mysmallbowtie$} ($(top)+(leftdiamondEast)$) ;
+\draw[rounded corners=15pt, orange] ($(R)+(leftdiamondEast)$) -- ($(-0.6,-0.6)+(leftdiamondEast)$) -- ($(top)+(leftdiamondEast)$);
+ \draw[rounded corners=10pt, olive] ($(top)+(leftdiamondEast)$) -- ($(P)+(leftdiamondEast)+(0.5,0)$) -- ($(P)+(leftdiamondEast)$);
  }
  \newcommand\MacroTikzDleftdiamondSouth{
  \MacroTikzDFourClustersTriangle{leftdiamondSouth}
-\draw  ($(R)+(leftdiamondSouth)$)  --  node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$} ($(P)+(leftdiamondSouth)$) --  node[pos=0.25]{$\mysmallbowtie$} ($(top)+(leftdiamondSouth)$) ;
-\draw[rounded corners=15pt] ($(R)+(leftdiamondSouth)$) -- ($(-0.6,-0.6)+(leftdiamondSouth)$) -- ($(top)+(leftdiamondSouth)$);
+\draw[magenta]  ($(R)+(leftdiamondSouth)$)  --  node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$} ($(P)+(leftdiamondSouth)$);
+\draw[gray] ($(P)+(leftdiamondSouth)$) --  node[pos=0.25]{$\mysmallbowtie$} ($(top)+(leftdiamondSouth)$) ;
+\draw[rounded corners=15pt, orange] ($(R)+(leftdiamondSouth)$) -- ($(-0.6,-0.6)+(leftdiamondSouth)$) -- ($(top)+(leftdiamondSouth)$);
  } 
  % left diamond ends
  
 
   \newcommand\MacroTikzDrightdiamondNorth{
  \MacroTikzDFourClustersTriangle{rightdiamondNorth}
-\draw  ($(L)+(rightdiamondNorth)$)  --  ($(P)+(rightdiamondNorth)$) --  ($(top)+(rightdiamondNorth)$) ;
-\draw[rounded corners=15pt] ($(L)+(rightdiamondNorth)$) -- ($(0.6,-0.6)+(rightdiamondNorth)$) -- ($(top)+(rightdiamondNorth)$);
+\draw[red] ($(L)+(rightdiamondNorth)$)  --  ($(P)+(rightdiamondNorth)$);
+\draw[olive] ($(P)+(rightdiamondNorth)$) --  ($(top)+(rightdiamondNorth)$) ;
+\draw[rounded corners=15pt,cyan] ($(L)+(rightdiamondNorth)$) -- ($(0.6,-0.6)+(rightdiamondNorth)$) -- ($(top)+(rightdiamondNorth)$);
  }
  
    \newcommand\MacroTikzDrightdiamondWest{
  \MacroTikzDFourClustersTriangle{rightdiamondWest}
-\draw  ($(P)+(rightdiamondWest)$) --  node[pos=0.25]{$\mysmallbowtie$} ($(top)+(rightdiamondWest)$) ;
-\draw[rounded corners=15pt] ($(L)+(rightdiamondWest)$) -- ($(0.6,-0.6)+(rightdiamondWest)$) -- ($(top)+(rightdiamondWest)$);
-\draw[rounded corners=10pt] ($(top)+(rightdiamondWest)$) -- ($(P)+(rightdiamondWest)+(-0.5,0)$) -- ($(P)+(rightdiamondWest)$);
+\draw [gray] ($(P)+(rightdiamondWest)$) --  node[pos=0.25]{$\mysmallbowtie$} ($(top)+(rightdiamondWest)$) ;
+\draw[rounded corners=15pt, cyan] ($(L)+(rightdiamondWest)$) -- ($(0.6,-0.6)+(rightdiamondWest)$) -- ($(top)+(rightdiamondWest)$);
+\draw[rounded corners=10pt, olive] ($(top)+(rightdiamondWest)$) -- ($(P)+(rightdiamondWest)+(-0.5,0)$) -- ($(P)+(rightdiamondWest)$);
  }
   \newcommand\MacroTikzDrightdiamondEast{
  \MacroTikzDFourClustersTriangle{rightdiamondEast}
-\draw  ($(L)+(rightdiamondEast)$)  -- node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$}  ($(P)+(rightdiamondEast)$);
-\draw[rounded corners=20pt] ($(L)+(rightdiamondEast)$) -- ($(0.8,-1)+(rightdiamondEast)$) -- ($(top)+(rightdiamondEast)$);
-\draw[rounded corners=10pt] ($(L)+(rightdiamondEast)$) -- ($(P)+(rightdiamondEast)+(0,-0.6)$) -- ($(P)+(rightdiamondEast)$);
+\draw[green]  ($(L)+(rightdiamondEast)$)  -- node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$}  ($(P)+(rightdiamondEast)$);
+\draw[rounded corners=20pt, cyan] ($(L)+(rightdiamondEast)$) -- ($(0.8,-1)+(rightdiamondEast)$) -- ($(top)+(rightdiamondEast)$);
+\draw[rounded corners=10pt, red] ($(L)+(rightdiamondEast)$) -- ($(P)+(rightdiamondEast)+(0,-0.6)$) -- ($(P)+(rightdiamondEast)$);
  } 
  \newcommand\MacroTikzDrightdiamondSouth{
  \MacroTikzDFourClustersTriangle{rightdiamondSouth}
-\draw  ($(L)+(rightdiamondSouth)$)  --  node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$} ($(P)+(rightdiamondSouth)$) -- node[pos=0.25]{$\mysmallbowtie$} ($(top)+(rightdiamondSouth)$) ;
-\draw[rounded corners=15pt] ($(L)+(rightdiamondSouth)$) -- ($(0.6,-0.6)+(rightdiamondSouth)$) -- ($(top)+(rightdiamondSouth)$);
+\draw[green]  ($(L)+(rightdiamondSouth)$)  --  node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$} ($(P)+(rightdiamondSouth)$);
+\draw[gray]  ($(P)+(rightdiamondSouth)$) -- node[pos=0.25]{$\mysmallbowtie$} ($(top)+(rightdiamondSouth)$) ;
+\draw[rounded corners=15pt, cyan] ($(L)+(rightdiamondSouth)$) -- ($(0.6,-0.6)+(rightdiamondSouth)$) -- ($(top)+(rightdiamondSouth)$);
 }
 \newcommand\MacroTikzDAboveSouth{
 \MacroTikzDFourClustersTriangle{abovesouth}
-\draw  ($(L)+(abovesouth)$)  --  node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$} ($(P)+(abovesouth)$) -- node[pos=0.25]{$\mysmallbowtie$} ($(top)+(abovesouth)$)  ($(P)+(abovesouth)$) -- node[sloped,rotate=90,pos=0.2]{$\mysmallbowtie$} ($(R)+(abovesouth)$);
+\draw  [green] ($(L)+(abovesouth)$)  --  node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$}  ($(P)+(abovesouth)$);
+\draw [gray] ($(P)+(abovesouth)$) -- node[pos=0.25]{$\mysmallbowtie$} ($(top)+(abovesouth)$) ; 
+\draw [magenta] ($(P)+(abovesouth)$) -- node[sloped,rotate=90,pos=0.2]{$\mysmallbowtie$} ($(R)+(abovesouth)$);
  }
 \newcommand\MacroTikzDSouth{
 \MacroTikzDFourClustersTriangle{south}
-\draw ($(L)+(south)$) -- node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$} ($(P)+(south)$) -- node[sloped,rotate=90,pos=0.2]{$\mysmallbowtie$} ($(R)+(south)$);
-\draw[rounded corners=10pt] ($(L)+(south)$) --  ($(0,\TikzH*0.5)+(south)$) -- ($(R)+(south)$);
+\draw[green] ($(L)+(south)$) -- node[sloped,rotate=90,pos=0.8]{$\mysmallbowtie$} ($(P)+(south)$);
+\draw[magenta] ($(P)+(south)$) -- node[sloped,rotate=90,pos=0.2]{$\mysmallbowtie$} ($(R)+(south)$);
+\draw[rounded corners=10pt, brown] ($(L)+(south)$) --  ($(0,\TikzH*0.5)+(south)$) -- ($(R)+(south)$);
 }
 
  \newcommand\TikzDFourClusters[1]{
@@ -4400,18 +4410,18 @@ node[pos=0.05, below]{$\ga$};
 \node [below= 3.8*\TikzBelow  of belownorth] (abovesouth) {};%{abovesouth};
 \node [below=0.8* \TikzBelow of abovesouth] (south) {};%{south};
 
-\node [right= 9cm of north, yshift=-2cm] {$x_0$};
-\node [above=5.5cm of leftdiamondWest] {$x_2$};
-\node [above=5.5cm of rightdiamondEast] {$x_1$};
+\node [right= 9cm of north, yshift=-2cm, brown] {$x_0$};
+\node [above=5.5cm of leftdiamondWest, blue] {$x_2$};
+\node [above=5.5cm of rightdiamondEast, red] {$x_1$};
 
-\node [below=5cm of belownorth] {$\frac{x_{1} + x_{2}}{x_{0}}$};
-\node [above=4cm of abovesouth] {$\frac{x_{0} x_{1} + x_{0} x_{2} + x_{1} + x_{2}}{x_{0} x_{1} x_{2}}$};
+\node [below=5cm of belownorth, olive] {$\frac{x_{1} + x_{2}}{x_{0}}$};
+\node [above=4cm of abovesouth, gray] {$\frac{x_{0} x_{1} + x_{0} x_{2} + x_{1} + x_{2}}{x_{0} x_{1} x_{2}}$};
 
-\node [below=5.1cm of leftdiamondWest] {$\frac{x_{0} + 1}{x_{1}}$};
-\node [below=5.1cm of rightdiamondEast] {$\frac{x_{0} + 1}{x_{2}}$};
+\node [below=5.1cm of leftdiamondWest, magenta] {$\frac{x_{0} + 1}{x_{1}}$};
+\node [below=5.1cm of rightdiamondEast, green] {$\frac{x_{0} + 1}{x_{2}}$};
 
-\node [below=2.7cm of leftdiamondNorth, xshift=-0.7cm] {$\frac{x_{0} x_{2} + x_{1} + x_{2}}{x_{0} x_{1}}$};
-\node [below=2.7cm of rightdiamondNorth, xshift=0.7cm] {$\frac{x_{0} x_{1} + x_{1} + x_{2}}{x_{0} x_{2}}$};
+\node [below=2.7cm of leftdiamondNorth, xshift=-0.7cm, orange] {$\frac{x_{0} x_{2} + x_{1} + x_{2}}{x_{0} x_{1}}$};
+\node [below=2.7cm of rightdiamondNorth, xshift=0.7cm, cyan] {$\frac{x_{0} x_{1} + x_{1} + x_{2}}{x_{0} x_{2}}$};
 
 %  \path[every node/.style={font=\sffamily\small}]
 
