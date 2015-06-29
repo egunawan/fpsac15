@@ -276,7 +276,7 @@ node[blue,below, pos=0.9] {$p_k$};
 	\draw[thick] (0,0) -- (y) ;
 	\draw[black] (-0.1*\Tikzn,0.4*\Tikzn) node {$\rho_1$};
 	\draw[black] (-0.2*\Tikzn,1.3*\Tikzn) node {$\rho_f$};
-	\draw (v) node[below,white] {$v$};% \draw (y) node[below,olive] {$y$};
+	\draw (v) node[below,white] {};%{$v$};% \draw (y) node[below,olive] {$y$};
 	
 	\newcommand\TikzLowerPointerLeft{(-\Tikzn*0.5,\Tikzn*0.5)} 
 	\newcommand\TikzLowerPointerRight{(\Tikzn*0.5,\Tikzn*0.5)}
@@ -397,28 +397,28 @@ node[pos=0.2, below] {$\ga$};
 	{\draw [fill=olive, olive] \pos circle (\TikzPointSize*\Tikzn );}
 }
 
-
-\newcommand\TikzTwoFoldCoverCrossingRhoOneRhoF[1]{
-\begin{tikzpicture}[scale={#1}]
-\newcommand\Tikzn{2}
-\MacroTwoFoldCoverCrossingRhoOneRhoF
-\newcommand\TikzWidth{2}
-\draw[gray, thick,rounded corners=5pt] (v) -- (-\TikzWidth*\Tikzn,0) -- (-\TikzWidth*\Tikzn,2*\Tikzn) -- (y)
-(-1.8*\Tikzn,0) -- (-1*\Tikzn,2*\Tikzn) node [black,pos=0.7, left] {$\theta_1^1$};
-\draw[gray,thick, rounded corners=5pt] (v) -- (\TikzWidth*\Tikzn,0) -- (\TikzWidth*\Tikzn,2*\Tikzn) -- (y)
-(1.8*\Tikzn,2*\Tikzn) -- (1*\Tikzn,0) node [black,pos=0.25, left] {$\theta_1^2$};
-
-\newcommand\TikzHeightBelow{0.4}
-\newcommand\TikzHeightAbove{0.8}
-\draw [RedTilSigmaStyle, dashed, ->] (-\Tikzn *2, \Tikzn * \TikzHeightAbove) -- (\Tikzn *0.7, \Tikzn * \TikzHeightAbove) -- (2*\Tikzn, \Tikzn*\TikzHeightAbove) node[pos=0.7,above] {$\tilsi$};
-\draw[fill=olive] (-\Tikzn *2, \Tikzn * \TikzHeightAbove) circle (\TikzPunctureActualSize) node[olive,left] {$\tils$};
-\draw[fill=olive] (2*\Tikzn, \Tikzn*\TikzHeightAbove) circle (\TikzPunctureActualSize) node[olive,right] {$\tilt$};
-\draw [CyanTilBetaStyle, dashed, ->] (-\Tikzn *1.5, \Tikzn * \TikzHeightBelow) -- (0.3*\Tikzn, \Tikzn*\TikzHeightBelow) node[pos=0.2, below] {$\tilbe$};
-
-\draw (-1.4,2*\Tikzn) node [white, above] {$y^2$};
-\draw (1.4,0*\Tikzn) node [white, below] {$y^1$};
-\end{tikzpicture}
-}
+%
+%\newcommand\TikzTwoFoldCoverCrossingRhoOneRhoF[1]{
+%\begin{tikzpicture}[scale={#1}]
+%\newcommand\Tikzn{2}
+%\MacroTwoFoldCoverCrossingRhoOneRhoF
+%\newcommand\TikzWidth{2}
+%\draw[gray, thick,rounded corners=5pt] (v) -- (-\TikzWidth*\Tikzn,0) -- (-\TikzWidth*\Tikzn,2*\Tikzn) -- (y)
+%(-1.8*\Tikzn,0) -- (-1*\Tikzn,2*\Tikzn) node [black,pos=0.7, left] {$\theta_1^1$};
+%\draw[gray,thick, rounded corners=5pt] (v) -- (\TikzWidth*\Tikzn,0) -- (\TikzWidth*\Tikzn,2*\Tikzn) -- (y)
+%(1.8*\Tikzn,2*\Tikzn) -- (1*\Tikzn,0) node [black,pos=0.25, left] {$\theta_1^2$};
+%
+%\newcommand\TikzHeightBelow{0.4}
+%\newcommand\TikzHeightAbove{0.8}
+%\draw [RedTilSigmaStyle, dashed, ->] (-\Tikzn *2, \Tikzn * \TikzHeightAbove) -- (\Tikzn *0.7, \Tikzn * \TikzHeightAbove) -- (2*\Tikzn, \Tikzn*\TikzHeightAbove) node[pos=0.7,above] {$\tilsi$};
+%\draw[fill=olive] (-\Tikzn *2, \Tikzn * \TikzHeightAbove) circle (\TikzPunctureActualSize) node[olive,left] {$\tils$};
+%\draw[fill=olive] (2*\Tikzn, \Tikzn*\TikzHeightAbove) circle (\TikzPunctureActualSize) node[olive,right] {$\tilt$};
+%\draw [CyanTilBetaStyle, dashed, ->] (-\Tikzn *1.5, \Tikzn * \TikzHeightBelow) -- (0.3*\Tikzn, \Tikzn*\TikzHeightBelow) node[pos=0.2, below] {$\tilbe$};
+%
+%\draw (-1.4,2*\Tikzn) node [white, above] {$y^2$};
+%\draw (1.4,0*\Tikzn) node [white, below] {$y^1$};
+%\end{tikzpicture}
+%}
 
 
 %%%% current 
@@ -828,29 +828,23 @@ node[pos=0.2, below] {$\ga$};
 
  \newcommand\MacroTtwoTpathChubby{
 	 \begin{scope}[thick, gray!60]
-	 \draw[rounded corners = 20pt] (-4,4)  -- (0,7) node[pos=0.8,above,black]{$1$} -- (4,4);
+	 \newcommand\localfontsize{\small}
+	 \draw[rounded corners = 20pt] (-4,4)  -- (0,7) node[pos=0.8,above,black]{\localfontsize $1$} -- (4,4);
 	 
 	 \draw[rounded corners = 15pt] (0,0) -- 
 	 (-2.5,4) %-- (-3,4) 
-	 --  (0,6) node[pos=0.8,right,black]{$2$}  -- (4,4);
+	 --  (0,6) node[pos=0.8,right,black]{\localfontsize $2$}  -- (4,4);
 	 
-	 \draw[thick] (0,0) -- (0,2.9) node[pos=0.8, right=2pt,black]{$r$};
+	 \draw[thick] (0,0) -- (0,2.9) node[pos=0.8, right=2pt,black]{\localfontsize $r$};
 	
 	\draw[style = thick, rounded corners = 20pt]
 	(0,0) .. controls (-1.5,2) and (-2,3) .. (0,5) .. 
-	controls (2,3)  and (2,2) .. (0,0) node[pos=0.4, above=2pt,black] {$\ell$};
+	controls (2,3)  and (2,2) .. (0,0) node[pos=0.4, above=2pt,black] {\localfontsize $\ell$};
 	
 	\draw
-	(0,0) -- %node[pos=0.5, right] {$b_3$} 
-	(4,4) --
-	%node[pos=0.5, above] {$b_4$} 
-	(0,8) -- 
-	node[pos=0.5, left] {}
-	 (-4,4) --
-	%node[pos=0.5, below] {$b_2$}  
-	(0,0);	
+	(0,0) -- (4,4) -- (0,8) -- node[pos=0.5, left] {} (-4,4) -- (0,0);	
 	\end{scope}
-	\draw [fill=violet] (0,2.9) circle (1ex);
+	\draw [fill=violet] (0,2.9) circle (.3ex);
  }
 
 \newcommand\MacroCounterClockRadius[4]{
@@ -889,6 +883,7 @@ rounded corners = 5pt,
 	controls  (-2,3) and (-1.5,2)  ..   ({#3},{#4}); %node[pos=0.5, right] {$\ell$};
 }
 
+\newcommand\TikzPosterTpathSixNineFontSize{\small}
 \newcommand\TikzTpathSix[1]{
 	\begin{tikzpicture} [scale = {#1}]
 	\begin{scope}[rotate=45]
@@ -904,9 +899,9 @@ rounded corners = 5pt,
 	\end{scope}
 	\end{scope}
 	%\draw (-3,7) node {($6$)};
-	\node at (-4,6.3) {$b_4$};
-	\node at (-3,-0.5) {$b_2$};
-	\node at (0.5,3) {$b_3$};
+	\node at (-4,6.3) {\TikzPosterTpathSixNineFontSize $b_4$};
+	\node at (-3,-0.5) {\TikzPosterTpathSixNineFontSize $b_2$};
+	\node at (0.5,3) {\TikzPosterTpathSixNineFontSize $b_3$};
 	\end{tikzpicture}
 }
 
@@ -926,11 +921,11 @@ rounded corners = 5pt,
 	\end{scope}
 	\end{scope}
 	%\draw (-3,7) node {($6'$)};
-	\node at (-4,6.3) {$b_4$};
-	\node at (-3,-0.5) {$b_2$};
-	\node at (0.5,3) {$b_3$};
+	\node at (-4,6.3) {\TikzPosterTpathSixNineFontSize $b_4$};
+	\node at (-3,-0.5) {\TikzPosterTpathSixNineFontSize $b_2$};
+	\node at (0.5,3) {\TikzPosterTpathSixNineFontSize $b_3$};
 	%\node[white] at (-6.2,3) {$b_1$};
-	\node[white] at (-8,3){}; \node[white] at (2,3){};
+	\node[] at (-8,3){}; \node[] at (2,3){};
 	\end{tikzpicture}
 }
 
@@ -948,9 +943,9 @@ rounded corners = 5pt,
 	\end{scope}
 	\end{scope}
 	%\draw (-3,7) node {($7$)};
-	\node at (-4,6.3) {$b_4$};
-	\node at (-3,-0.5) {$b_2$};
-	\node at (0.5,3) {$b_3$};
+	\node at (-4,6.3) {\TikzPosterTpathSixNineFontSize $b_4$};
+	\node at (-3,-0.5) {\TikzPosterTpathSixNineFontSize $b_2$};
+	\node at (0.5,3) {\TikzPosterTpathSixNineFontSize $b_3$};
 	\end{tikzpicture}
 }
 
@@ -974,8 +969,8 @@ rounded corners = 5pt,
 \newcommand\TikzTpathEight[1]{
 	\begin{tikzpicture} [scale = {#1}]
 	\MacroTikzTpathEight{1}
-	\node at (-6.2,3) {$b_1$};
-	\node at (0.5,3) {$b_3$};
+	\node at (-6.2,3) {\TikzPosterTpathSixNineFontSize $b_1$};
+	\node at (0.5,3) {\TikzPosterTpathSixNineFontSize $b_3$};
 	\node at (-4,6.3) {};
 	\node at (-3,-0.5) {};
 	\end{tikzpicture}
@@ -994,8 +989,8 @@ rounded corners = 5pt,
 	\end{scope}
 	\end{scope}
 	%\draw (-3,7) node {($9$)};
-	\node at (-6.2,3) {$b_1$};
-	\node at (0.5,3) {$b_3$};
+	\node at (-6.2,3) {\TikzPosterTpathSixNineFontSize $b_1$};
+	\node at (0.5,3) {\TikzPosterTpathSixNineFontSize $b_3$};
 	\node at (-4,6.3) {};
 	\node at (-3,-0.5) {};
 	\end{tikzpicture}
@@ -1048,15 +1043,7 @@ rounded corners = 5pt,
 	
 	\end{tikzpicture}
 }
-%\newcommand \TikzPolygonTpathSixBad[1]{
-%\begin{tikzpicture}[scale={#1}, rotate=-90]
-%	\MacroTtwoLiftedPolygon
-%	\begin{scope}[TPathStyle]
-%	\draw [->, rounded corners = \rdPolygonTpath pt] (-4,-4) -- (-4,0) -- (0,-4) -- (0,0) [rounded corners = 0] -- (0,4)   [rounded corners=\rdPolygonTpath pt] -- (-4,4)  -- (0,0) -- (4,0);
-%	\end{scope}
-%	
-%	\end{tikzpicture}
-%}
+
 \newcommand \TikzPolygonTpathSeven[1]{
 \begin{tikzpicture}[scale={#1}, rotate=-90]
 	\MacroTtwoLiftedPolygon
@@ -1627,28 +1614,29 @@ rounded corners = 5pt,
    \coordinate(x) at (0,4);  \coordinate(z) at (4,4);
  }
 
-\newcommand \MacroTtwoTriangulationVertices{
- \draw [fill=olive] (0,0) circle (.6ex);
-\draw [fill=olive] (0,4) circle (.6ex);
- \draw (-0.3,4.2) node[olive] {$v$};
-\draw [fill=olive] (4,0) circle (.6ex);
-\draw [fill=olive] (4,4) circle (.6ex);
-\draw [fill=violet] (1.2,2.2) circle (.6ex); %puncture
- \draw (1.4,2) node[violet] {\tiny $P$};
-  }
+%\newcommand \MacroTtwoTriangulationVertices{
+% \draw [fill=olive] (0,0) circle (.6ex);
+%\draw [fill=olive] (0,4) circle (.6ex);
+% \draw (-0.3,4.2) node[olive] {$v$};
+%\draw [fill=olive] (4,0) circle (.6ex);
+%\draw [fill=olive] (4,4) circle (.6ex);
+%\draw [fill=violet] (1.2,2.2) circle (.6ex); %puncture
+%% \draw (1.4,2) node[violet] {\tiny $P$};
+%  }
 
 
  \newcommand \MacroTtwoIdealTriangulationWithNumberLabels {
  \MacroTtwoTriangulationCoordinates
+ \newcommand\tempfontsize{\small}
 \begin{scope}[NonOrientedTriangulationStyle]
-\draw[postaction={decorate}]  (s) -- (vR) node[pos=0.5,left] {$b_1$};
-\draw[postaction={decorate}]  (vR) -- (vL) node[pos=0.5,below]{$b_2$};
-\draw[postaction={decorate}]  (vL) -- (t) node[pos=0.5,right] {$b_3$};
-\draw[postaction={decorate}]  (t) --(s) node[pos=0.5,above] {$b_4$};
-\draw [postaction={decorate}] (t) ..  controls(3.5,0.4) and (3.5,2) .. (vR) node[left, pos=0.3] {$1$};
-\draw [postaction={decorate}] (t) ..  controls (3.7,1) and (3.8,3.9)   .. (vL) node[right, pos=0.5] {$2$};%;
-\draw [NooseArrowAtPosStyleSix] (vL) ..  controls (3.9,1.4)  and (0.7,0.1)  .. (vL) node[pos=0.7, right,above] {$\ell$}; %loop
-\draw[postaction={decorate}] (vL) -- (1.2,2.2) node[left, pos=0.7] {$r$};
+\draw[postaction={decorate}]  (s) -- (vR) node[pos=0.5,left] {\tempfontsize $b_1$};
+\draw[postaction={decorate}]  (vR) -- (vL) node[pos=0.5,below]{\tempfontsize $b_2$};
+\draw[postaction={decorate}]  (vL) -- (t) node[pos=0.5,right] {\tempfontsize $b_3$};
+\draw[postaction={decorate}]  (t) --(s) node[pos=0.5,above] {\tempfontsize $b_4$};
+\draw [postaction={decorate}] (t) ..  controls(3.5,0.4) and (3.5,2) .. (vR) node[left, pos=0.3] {\tempfontsize $1$};
+\draw [postaction={decorate}] (t) ..  controls (3.7,1) and (3.8,3.9)   .. (vL) node[right, pos=0.5] {\tempfontsize $2$};%;
+\draw [NooseArrowAtPosStyleSix] (vL) ..  controls (3.9,1.4)  and (0.7,0.1)  .. (vL) node[pos=0.7, right,above] {\tempfontsize $\ell$}; %loop
+\draw[postaction={decorate}] (vL) -- (1.2,2.2) node[left, pos=0.7] {\tempfontsize $r$};
 \end{scope}
  } 
   \newcommand\TikzTtwoIdealTriangulationWithNumberLabels[1]{ % USED
@@ -1656,13 +1644,13 @@ rounded corners = 5pt,
 	\begin{scope}
 	\MacroTtwoIdealTriangulationWithNumberLabels
 	\draw [<-,decorate, line width=2 pt, dashed, red!60] (0,0) ..  controls (0,5) and (4,4)   .. (4,0)
-	node[pos=0.6, left=2pt] {\Large{$\ga$}}; % red gamma
-	\MacroTtwoTriangulationVertices
-	\draw [fill=violet] (1.2,2.2) circle (.6ex); %puncture
-	\draw [fill=olive] (t) circle (.6ex); % node[above,olive] {$t$};
-	\draw [fill=olive] (vL) circle (.6ex); % node[left,olive] {$v$}; %vL
-	\draw [fill=olive] (s) circle (.6ex); % node[right,olive] {$s$};
-	\draw [fill=olive] (vR) circle (.6ex); % node[below,olive] {$z$}; %vR
+	node[sloped, rotate=90, pos=0.7, below=6pt] {\small{$\ga$}}; % red gamma
+	%\MacroTtwoTriangulationVertices
+	\draw [fill=violet] (1.2,2.2) circle (.3ex); %puncture
+	\draw [fill=olive] (t) circle (.2ex); 
+	\draw [fill=olive] (vL) circle (.2ex); 
+	\draw [fill=olive] (s) circle (.2ex); 
+	\draw [fill=olive] (vR) circle (.2ex); 
 	\end{scope}
 \end{tikzpicture}
 }  
@@ -3756,13 +3744,13 @@ node[pos=0.05, below]{$\ga$};
 \draw[RedSigmaStyle, NooseArrowAtPosStyleTwo,rounded corners=8pt] (\Tikzn,-\Tikzn) -- (0.6*\Tikzn,0) -- (0.1*\Tikzn,0.7*\Tikzn)
 -- (-0.5*\Tikzn,0.5*\Tikzn)
 -- (-0.6*\Tikzn,-0.3*\Tikzn) -- (0,-0.6*\Tikzn) -- (\Tikzn,-\Tikzn);
-\node at (0.4*\Tikzn,0.4*\Tikzn) [right]{$1$};
-\node at (-0.4*\Tikzn,0.4*\Tikzn) [above]{$2$};
-\node at (-0.6*\Tikzn,-0.6*\Tikzn) [right]{$3$};
-\node at (0.4*\Tikzn,-0.4*\Tikzn) [left]{$\tau$};
-\node at (1.3*\Tikzn,0) {$b_1$}; \node at (-1.3*\Tikzn,0) {$b_3$};
-\node at (0,1.3*\Tikzn) {$b_2$}; \node at (0,-1.3*\Tikzn) {$b_4$};
-\node at (-0.7*\Tikzn,0) [red] {$\ga$};
+\node at (0.4*\Tikzn,0.4*\Tikzn) [right]{\TikzPosterTpathSixNineFontSize $1$};
+\node at (-0.4*\Tikzn,0.4*\Tikzn) [above]{\TikzPosterTpathSixNineFontSize $2$};
+\node at (-0.6*\Tikzn,-0.6*\Tikzn) [right]{\TikzPosterTpathSixNineFontSize $3$};
+\node at (0.4*\Tikzn,-0.4*\Tikzn) [left]{\TikzPosterTpathSixNineFontSize $\tau$};
+\node at (1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_1$}; \node at (-1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_3$};
+\node at (0,1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_2$}; \node at (0,-1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_4$};
+\node at (-0.7*\Tikzn,0) [red] {\TikzPosterTpathSixNineFontSize $\ga$};
 \end{tikzpicture}
 }
 \newcommand\MacroDrawBlueDot[2]{
@@ -3778,12 +3766,15 @@ node[pos=0.05, below]{$\ga$};
 \MacroDrawBlueDot{0}{-0.3*\Tikzn}
 }
 \newcommand\MacroNooseTpathDrawLabels{
-\node at (0.5*\Tikzn,0.5*\Tikzn) [right]{\tiny$1$};
-\node at (-0.5*\Tikzn,0.5*\Tikzn) [left]{\tiny$2$};
-\node at (-0.7*\Tikzn,-0.7*\Tikzn) [right]{\tiny$3$};
-\node at (0.7*\Tikzn,-0.7*\Tikzn) [left]{\tiny$\tau$};
-\begin{scope}[white]
-\node at (1.3*\Tikzn,0) {$b_1$}; \node at (0,1.3*\Tikzn) {$b_2$};\node at (-1.3*\Tikzn,0) {$b_3$};\node at (0,-1.3*\Tikzn) {$b_4$};
+\node at (0.5*\Tikzn,0.5*\Tikzn) [right]{\TikzPosterTpathSixNineFontSize $1$};
+\node at (-0.5*\Tikzn,0.5*\Tikzn) [left]{\TikzPosterTpathSixNineFontSize $2$};
+\node at (-0.7*\Tikzn,-0.7*\Tikzn) [right]{\TikzPosterTpathSixNineFontSize $3$};
+\node at (0.7*\Tikzn,-0.7*\Tikzn) [left]{\TikzPosterTpathSixNineFontSize $\tau$};
+\begin{scope}[transparent]
+\node at (1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_1$}; 
+\node at (0,1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_2$};
+\node at (-1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_3$};
+\node at (0,-1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_4$};
 \end{scope}
 }
 
@@ -3803,7 +3794,7 @@ node[pos=0.05, below]{$\ga$};
 \draw [TPathStyle,rounded corners=20pt,PathArrowAtPosStyleSevenSmall] (-0.9*\Tikzn,-0.9*\Tikzn) -- (P) -- (\Tikzn,-\Tikzn) ;
 \MacroDrawBlueDot{0}{-0.3*\Tikzn}
 
-\node at (1.3*\Tikzn,0) {\tiny$b_1$}; 
+\node at (1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_1$}; 
 
 \node at (1.8*\Tikzn,0) {}; \node at (-1.8*\Tikzn,0) {}; 
 \end{tikzpicture}
@@ -3814,7 +3805,7 @@ node[pos=0.05, below]{$\ga$};
 
 \MacroNooseTpathDrawLabels
 \MacroNooseTPathOne
-\node at (1.3*\Tikzn,0) {\tiny$b_1$}; 
+\node at (1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_1$}; 
 \end{tikzpicture}
 }
 \newcommand\TikzNooseTpathTwo[1]{
@@ -3826,7 +3817,7 @@ node[pos=0.05, below]{$\ga$};
 \MacroNooseTPathOne
 \end{scope}
 \MacroNooseTpathDrawLabels
-\node at (0,1.3*\Tikzn) {\tiny$b_2$};
+\node at (0,1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_2$};
 %\MacroDrawBlueDot{0.2*\Tikzn}{0}
 
 
@@ -3844,7 +3835,7 @@ node[pos=0.05, below]{$\ga$};
 \MacroNooseTPathOne
 \end{scope}
 \MacroNooseTpathDrawLabels
-\node at (-1.3*\Tikzn,0) {\tiny$b_3$};
+\node at (-1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_3$};
 %\MacroDrawBlueDot{0.2*\Tikzn}{0}
 
 %\MacroDrawBlueDot{0}{0.2*\Tikzn}
@@ -3862,20 +3853,9 @@ node[pos=0.05, below]{$\ga$};
 \MacroNooseTPathOne
 \end{scope}
 \MacroNooseTpathDrawLabels
-\node at (0,-1.3*\Tikzn) {\tiny$b_4$};
-%\MacroDrawBlueDot{0}{0.2*\Tikzn}
-%
-%
-%\MacroDrawBlueDot{-0.2*\Tikzn}{0}
-%
-%\MacroDrawBlueDot{0.2*\Tikzn}{0}
+\node at (0,-1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_4$};
 \end{tikzpicture}
 }
-
-
-
-
-
 
 
 %%%
@@ -3911,13 +3891,13 @@ node[pos=0.05, below]{$\ga$};
 -- (-0.5*\Tikzn,0.5*\Tikzn)
 %-- (-0.6*\Tikzn,-0.3*\Tikzn) -- (0,-0.6*\Tikzn) 
 -- (-\Tikzn,-\Tikzn);
-\node at (0.4*\Tikzn,0.4*\Tikzn) [right]{$1$};
-\node at (-0.4*\Tikzn,0.5*\Tikzn) [above]{$2$};
-\node at (-0.5*\Tikzn,-0.5*\Tikzn) {$3$};
-\node at (0.5*\Tikzn,-0.5*\Tikzn) [left]{$0$};
-\node at (1.3*\Tikzn,0) {$b_1$}; \node at (-1.3*\Tikzn,0) {$b_3$};
-\node at (0,1.3*\Tikzn) {$b_2$}; \node at (0,-1.3*\Tikzn) {$b_4$};
-\node[rotate=50] at (0.2*\Tikzn,0.74*\Tikzn) [red] {$\ga$};
+\node at (0.4*\Tikzn,0.4*\Tikzn) [right]{\TikzPosterTpathSixNineFontSize $1$};
+\node at (-0.4*\Tikzn,0.5*\Tikzn) [above]{\TikzPosterTpathSixNineFontSize $2$};
+\node at (-0.5*\Tikzn,-0.5*\Tikzn) {\TikzPosterTpathSixNineFontSize $3$};
+\node at (0.5*\Tikzn,-0.5*\Tikzn) [left]{\TikzPosterTpathSixNineFontSize $0$};
+\node at (1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_1$}; \node at (-1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_3$};
+\node at (0,1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_2$}; \node at (0,-1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_4$};
+\node[rotate=50] at (0.2*\Tikzn,0.74*\Tikzn) [red] {\TikzPosterTpathSixNineFontSize $\ga$};
 \end{tikzpicture}
 }
 %\newcommand\MacroDrawBlueDot[2]{
@@ -3933,21 +3913,22 @@ node[pos=0.05, below]{$\ga$};
 %\MacroDrawBlueDot{0}{-0.3*\Tikzn}
 %}
 \newcommand\MacroNotNooseTpathDrawLabels{
-\node at (0.4*\Tikzn,0.4*\Tikzn) [right]{\tiny$1$};
-\node at (-0.4*\Tikzn,0.5*\Tikzn) [above]{\tiny$2$};
-\node at (-0.5*\Tikzn,-0.5*\Tikzn) {\tiny$3$};
-\node at (0.5*\Tikzn,-0.5*\Tikzn) [right]{\tiny$0$};
+\node at (0.4*\Tikzn,0.4*\Tikzn) [right]{\TikzPosterTpathSixNineFontSize$1$};
+\node at (-0.4*\Tikzn,0.5*\Tikzn) [above]{\TikzPosterTpathSixNineFontSize$2$};
+\node at (-0.5*\Tikzn,-0.5*\Tikzn) {\TikzPosterTpathSixNineFontSize$3$};
+\node at (0.5*\Tikzn,-0.5*\Tikzn) [right]{\TikzPosterTpathSixNineFontSize$0$};
 \node at (1.3*\Tikzn,0) {}; \node at (-1.3*\Tikzn,0) {};
 %\node at (0,1.3*\Tikzn) {$b_2$}; \node at (0,-1.3*\Tikzn) {$b_4$};
-
-
 %
 %\node at (0.5*\Tikzn,0.5*\Tikzn) [right]{\tiny$1$};
 %\node at (-0.5*\Tikzn,0.5*\Tikzn) [left]{\tiny$2$};
 %\node at (-0.7*\Tikzn,-0.7*\Tikzn) [right]{\tiny$3$};
 %\node at (0.7*\Tikzn,-0.7*\Tikzn) [left]{\tiny$\tau$};
-\begin{scope}[white]
-\node at (1.3*\Tikzn,0) {$b_1$}; \node at (0,1.3*\Tikzn) {$b_2$};\node at (-1.3*\Tikzn,0) {$b_3$};\node at (0,-1.3*\Tikzn) {$b_4$};
+\begin{scope}[transparent]
+\node at (1.3*\Tikzn,0)  {\TikzPosterTpathSixNineFontSize $b_1$}; 
+\node at (0,1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_2$};
+\node at (-1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_3$};
+\node at (0,-1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_4$};
 \end{scope}
 }
 
@@ -3973,7 +3954,7 @@ node[pos=0.05, below]{$\ga$};
 \draw[rounded corners=15pt,PathArrowAtPosStyleFourSmall] (P1) % -- (0,-0.6*\Tikzn) 
 -- (-\Tikzn,\Tikzn);
 
-\draw [TPathStyle, PathArrowAtPosStyleEnd] (-\Tikzn,\Tikzn) -- (-\Tikzn,-\Tikzn); \node[black] at (-1.3*\Tikzn,0) {\tiny$b_3$};
+\draw [TPathStyle, PathArrowAtPosStyleEnd] (-\Tikzn,\Tikzn) -- (-\Tikzn,-\Tikzn); \node[black] at (-1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_3$};
 
 \end{scope}
 %
@@ -3996,7 +3977,7 @@ node[pos=0.05, below]{$\ga$};
 \MacroNotNooseTpathDrawLabels
 %\MacroNotNooseTPathOne
 \begin{scope}[TPathStyle]
-\draw [PathArrowAtPosStyleFourSmall] (\Tikzn,-\Tikzn) -- (\Tikzn,\Tikzn); \node[black] at (1.3*\Tikzn,0) {\tiny$b_1$}; 
+\draw [PathArrowAtPosStyleFourSmall] (\Tikzn,-\Tikzn) -- (\Tikzn,\Tikzn); \node[black] at (1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_1$}; 
 \draw [TPathStyle,rounded corners=20pt,PathArrowAtPosStyleFourSmall] (0.9*\Tikzn,0.9*\Tikzn) -- (P) -- (-0.9*\Tikzn,0.9*\Tikzn);
 \MacroDrawBlueDot{0}{0.3*\Tikzn}
 
@@ -4011,7 +3992,7 @@ node[pos=0.05, below]{$\ga$};
 \MacroDrawBlueDot{-0.2*\Tikzn}{-0.2*\Tikzn}
 
 \MacroNotNooseDrawArcThree{PathArrowAtPosStyleSevenSmall}
-\draw [PathArrowAtPosStyleEnd]  (\Tikzn,-\Tikzn) -- (-\Tikzn,-\Tikzn); \node[black] at (0,-1.3*\Tikzn) {\tiny$b_4$};
+\draw [PathArrowAtPosStyleEnd]  (\Tikzn,-\Tikzn) -- (-\Tikzn,-\Tikzn); \node[black] at (0,-1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_4$};
 \end{scope}
 \end{tikzpicture}
 }
@@ -4025,7 +4006,7 @@ node[pos=0.05, below]{$\ga$};
 
 \MacroDrawBlueDot{0.3*\Tikzn}{0}
 
-\draw [PathArrowAtPosStyleFourSmall] (\Tikzn,\Tikzn) -- (-\Tikzn,\Tikzn); \node[black] at (0,1.3*\Tikzn) {\tiny$b_2$};
+\draw [PathArrowAtPosStyleFourSmall] (\Tikzn,\Tikzn) -- (-\Tikzn,\Tikzn); \node[black] at (0,1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_2$};
 
 \draw [rounded corners=5pt,PathArrowAtPosStyleSevenSmall] (-\Tikzn,\Tikzn) -- 
 (-0.2*\Tikzn,0.2*\Tikzn) --
@@ -4038,7 +4019,7 @@ node[pos=0.05, below]{$\ga$};
 \MacroDrawBlueDot{-0.2*\Tikzn}{-0.1*\Tikzn}
 
 \MacroNotNooseDrawArcThree{PathArrowAtPosStyleSevenSmall}
-\draw [PathArrowAtPosStyleEnd]  (\Tikzn,-\Tikzn) -- (-\Tikzn,-\Tikzn); \node[black] at (0,-1.3*\Tikzn) {\tiny$b_4$};
+\draw [PathArrowAtPosStyleEnd]  (\Tikzn,-\Tikzn) -- (-\Tikzn,-\Tikzn); \node[black] at (0,-1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_4$};
 \end{scope}
 \end{tikzpicture}
 }
@@ -4055,7 +4036,7 @@ node[pos=0.05, below]{$\ga$};
 \draw [TPathStyle,rounded corners=20pt,PathArrowAtPosStyleEightSmall] (0.9*\Tikzn,0.99*\Tikzn) -- (P) -- (-0.9*\Tikzn,0.9*\Tikzn);
 \MacroDrawBlueDot{0}{0.3*\Tikzn}
 
-\draw [TPathStyle, PathArrowAtPosStyleEnd] (-\Tikzn,\Tikzn) -- (-\Tikzn,-\Tikzn); \node[black] at (-1.3*\Tikzn,0) {\tiny$b_3$};
+\draw [TPathStyle, PathArrowAtPosStyleEnd] (-\Tikzn,\Tikzn) -- (-\Tikzn,-\Tikzn); \node[black] at (-1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_3$};
 
 \end{scope}
 \end{tikzpicture}
