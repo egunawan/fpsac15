@@ -14,8 +14,6 @@
 %\usepackage[margin=10pt,font=small,labelfont=bf]{caption}
 \usepackage{wrapfig}%,kantlipsum}
 
-
-
 %\usepackage{filecontents}% http://ctan.org/pkg/filecontents
 \usepackage{lipsum}% http://ctan.org/pkg/lipsum
 \usepackage{adjustbox} % to use minipage
@@ -34,11 +32,9 @@
 
 
 \input{mycommands}  %%%%
-
-%%%%%%% TIKZ %%
-%\input{poster_figures}  %%%%
 %%%%%%% TIKZ %%
 \input{tpath_poster_figures}  %%%%
+%%%%%%% TIKZ %%
 %%%%
 
 %%%%%
@@ -101,7 +97,6 @@ $\{ x_1, \dots, {x_k}, \dots, x_n\} \longleftrightarrow \{ x_1, \dots, \hat{x_k}
     \item \textbf{Positivity:} this Laurent polynomial has positive coefficients (2014, [Lee and Schiffler], [Gross, Hacking, Keel, and Kontsevich], and others).
     \end{itemize}
 }
-
 
 \block{Cluster Algebras from Surfaces} {
 
@@ -322,66 +317,48 @@ $$x(\om) := \left( {\prod_{i\text{ odd}} x_{\om_i}} \right)
 %\mbox{
 %\subfigure[An arc $\ga$ of $\Cnn{4}$ which crosses $T^o$ $5$ times.]{
 \begin{tikzfigure}
-[The four $(T^o,\ga)$-paths (of $T^o$ and $\ga$ from Figure \ref{fig:T2_triangulated_polygon_original}) which contain a (counterclockwise) non-backtrack cycle $(\rrNon)$.
-All backtracks $(\underline{2,2})$ and $(\underline{\ell,\ell})$ have been omitted, and steps are not drawn exactly along the arcs/boundary edges for illustration purposes.]\label{fig:TtwoTpaths}
-\TikzTtwoIdealTriangulationWithNumberLabels{1.4*\TikzFourTpathsSize}
-%\label{fig:T2_triangulated_polygon_original}
-%}
-%\subfigure[\tiny\TpathCompleteSixDollar]
-%{
-\TikzTpathSix{\TikzFourTpathsSize}%\label{fig:path_six}}
-%\subfigure[\tiny\TpathCompleteSevenDollar]
-%{
-\TikzTpathSeven{\TikzFourTpathsSize}%}
-%\subfigure[\tiny\TpathCompleteEightDollar]
-%{
-\TikzTpathEight{\TikzFourTpathsSize}%}
-%\subfigure[\tiny\TpathCompleteNineDollar]
-%{
-\TikzTpathNine{\TikzFourTpathsSize}
+[Four of nine $(T^o,\ga)$-paths. %(of $T^o$ and $\ga$ from Figure \ref{fig:T2_triangulated_polygon_original}) which contain a (counterclockwise) non-backtrack cycle $(\rrNon)$.
+All backtracks $(\underline{2,2})$ and $(\underline{\ell,\ell})$ have been omitted.]
+\label{fig:T2_triangulated_polygon_original}
+\TikzTtwoIdealTriangulationWithNumberLabels{1.8*\TikzFourTpathsSize}
+\TikzTpathSix{\TikzFourTpathsSize}{ \TpathCompleteSixDollar}
+\TikzTpathSeven{\TikzFourTpathsSize}{ \TpathCompleteSevenDollar}
+\TikzTpathEight{\TikzFourTpathsSize}{ \TpathCompleteEightDollar}
+\TikzTpathNine{\TikzFourTpathsSize}{ \TpathCompleteNineDollar}
 \end{tikzfigure}
 
 \begin{tikzfigure}
-[
-The four $(T^o,\ga)$-paths of the ideal triangulation $T^o$ and the $\ell$-loop $\ga$ of Figure \ref{fig:TikzNooseGammaIdealTriangulation}.
-Each path contains a quasi-backtrack $(\overline{1,1})$, $(\overline{2,2})$, or $(\overline{3,3})$]
+[The four $(T^o,\ga)$-paths of the ideal triangulation $T^o$ and the $\ell$-loop $\ga$ of the first figure.]
+\label{fig:TikzNooseGammaIdealTriangulation}
+%Figure \ref{fig:TikzNooseGammaIdealTriangulation}.
+%Each path contains a quasi-backtrack $(\overline{1,1})$, $(\overline{2,2})$, or $(\overline{3,3})$]
 %\mbox{
 %\subfigure[An $\ell$-loop $\ga$ of $\Cnn{4}$ which crosses $T^o$ $3$ times.]{
-\TikzNooseGammaIdealTriangulation{\TikzNooseTpathsSize}
+\TikzNooseGammaIdealTriangulation{1.5*\TikzNooseTpathsSize}
 %\label{fig:TikzNooseGammaIdealTriangulation}
-%}
-%\subfigure[\tiny$(b_1,1,\overline{2,2},\overline{3,3},\tau)$]
-%{
-\TikzNooseTpathOne{\TikzNooseTpathsSize}%\label{fig:TikzNooseTpathOne}}
-%\subfigure[\tiny$(\tau,1,b_2,2,\overline{3,3},\tau)$]
-%{
-\TikzNooseTpathTwo{\TikzNooseTpathsSize}
-%}
-%\subfigure[\tiny$(\tau,\overline{1,1},2,b_3,3,\tau)$]
-%{
-\TikzNooseTpathThree{\TikzNooseTpathsSize}%}
-%\subfigure[\tiny$(\tau,\overline{1,1},\overline{2,2},3,b_4)$]
-%{
-\TikzNooseTpathFour{\TikzNooseTpathsSize}%}
-%}
+\TikzNooseTpathOne{\TikzNooseTpathsSize}{$(b_1,1,\overline{2,2},\overline{3,3},\tau)$}
+\TikzNooseTpathTwo{\TikzNooseTpathsSize}{$(\tau,1,b_2,2,\overline{3,3},\tau)$}
+\TikzNooseTpathThree{\TikzNooseTpathsSize}{$(\tau,\overline{1,1},2,b_3,3,\tau)$}
+\TikzNooseTpathFour{\TikzNooseTpathsSize}{$(\tau,\overline{1,1},\overline{2,2},3,b_4)$}
 %}\label{fig:TikzNoose}
 \end{tikzfigure}
 
 \begin{tikzfigure}
+[Three of the five $(T^o,\ga)$-paths of the ideal triangulation $T^o$ and the arc $\ga$ of the first figure]
+\label{fig:TikzNotNooseGammaIdealTriangulation}
 %\mbox{
 %\subfigure[An arc $\ga$ of $\Cnn{4}$ which crosses $T^o$ $3$ times.]{
-\TikzNotNooseGammaIdealTriangulation{\TikzNooseTpathsSize}
+\TikzNotNooseGammaIdealTriangulation{1.5*\TikzNooseTpathsSize}
 %\label{fig:TikzNotNooseGammaIdealTriangulation}}
 %\subfigure[\tiny$(b_1,1,\overline{2,\,}\underline{\overline{2},2},3,b_4)$]{
-\TikzNotNooseTpathOne{\TikzNooseTpathsSize}%}
+\TikzNotNooseTpathOne{\TikzNooseTpathsSize}{$(b_1,1,\overline{2,\,}\underline{\overline{2},2},3,b_4)$}
 %\subfigure[\tiny$(0,1,b_2,\overline{2,2},3,b_4)$]{
-\TikzNotNooseTpathTwo{\TikzNooseTpathsSize}%}
+\TikzNotNooseTpathTwo{\TikzNooseTpathsSize}{$(0,1,b_2,\overline{2,2},3,b_4)$}
 %\subfigure[\tiny$(0,\overline{1,1},2,\underline{3,3},b_3)$]
 %{
-\TikzNotNooseTpathThree{\TikzNooseTpathsSize}%\label{fig:TikzNotNooseTpathThree}}
-%}
+\TikzNotNooseTpathThree{\TikzNooseTpathsSize}{$(0,\overline{1,1},2,\underline{3,3},b_3)$}
 %\caption{
-%Three of the five $(T^o,\ga)$-paths of the ideal triangulation $T^o$ and the arc $\ga$ of Figure \ref{fig:TikzNotNooseGammaIdealTriangulation}.
+% \ref{fig:TikzNotNooseGammaIdealTriangulation}.
 %}\label{fig:TikzNotNoose}
 \renewcommand\TikzNooseTpathsSize{0.5}
 \end{tikzfigure}
@@ -403,65 +380,13 @@ Each path is homotopic to $\ga$ and satisfies (T1) but fails (T2) or (T3).
 \TikzNotNooseTpathThreeBad{\TikzNooseTpathsSize}
 \end{tikzfigure}
 %\label{fig:TikzNotNooseTpathThreeBad}
-%}
-%}
 %\caption{Examples of \emph{non}-$(T^o,\ga)$-paths for the situations in Figures \ref{fig:T2_triangulated_polygon_original}, \ref{fig:TikzNooseGammaIdealTriangulation}, and \ref{fig:TikzNotNooseGammaIdealTriangulation}.
 %Each path is homotopic to $\ga$ and satisfies (T1) but fails (T2) or (T3).}
 %\label{fig:non_tpaths}
 %\end{figure}}
-
-
 }
-
-
+\note[targetoffsetx=6cm, targetoffsety=-2cm, width=5.5cm]{Steps are not drawn exactly along the arcs/boundary edges for \mbox{illustration} purposes.}
 \end{columns}
-
-
-
-%
-%\column{0.7} \block{Example}{
-%%\begin{figure}%[htbp]
-%%\centering
-%
-%\newcommand\TriangulationSize{0.4}%{0.8}
-%\TikzTtwoIdealTriangulationWithNumberLabelsWithoutOrientationWithoutGamma{\TriangulationSize}
-%\quad
-%\TikzTtwoIdealTriangulationWithNumberLabelsWithoutOrientation{\TriangulationSize}
-%%\caption{Arc $\gamma$ crosses the ideal triangulation $T^o$ 5 times.}
-%%\end{figure}
-%
-%%\frametitle{Example:4 of 9 $(T^o,\ga)$-paths}
-%%\begin{figure}[htbp]
-%%\centering
-%
-%
-%%\subfigure[{\tiny $(b_4, 	1, 	b_2, 	\mathbf{r,	r}, 	\ell, 	b_3)$}]
-%\TikzTpathSix{\TpathSize}
-%%\quad 
-%%\subfigure[{\tiny $(b_4, 	1, 	b_2, 	\ell, 	\mathbf{r, 	r},	 	b_3)$}]
-%\TikzTpathSeven{\TpathSize}
-%% \subfigure[{\tiny $(b_1, 	1, 	2, 	\mathbf{r,	r}, 	\ell, 	b_3)$}]
-%\TikzTpathEight{\TpathSize}
-%%\quad 
-%%\subfigure[{\tiny $(b_1, 	1, 	2, 	\ell, 	\mathbf{r, 	r}, 	b_3)$}]
-%\TikzTpathNine{\TpathSize}
-%%\caption{ Four out of nine $(T^o,\gamma)$-paths }
-%%\end{figure}
-%}
-%
-%\block{Non-example of a $T$-path}{
-%%\begin{figure}
-%%\subfigure[The arc $\ga$]
-%{\TikzTtwoChubbyWithGamma{\TpathSize}}
-%%\subfigure[A $(T^o,\gamma)$-path]
-%{\TikzTpathSix{\TpathSize}}
-%%\subfigure[\it{Not} a $(T^o,\gamma)$-path]
-%{\TikzTpathSixBad{\TpathSize}}
-%%\caption{Both paths are homotopic to $\gamma$ and go along {\tiny $(b_4, 	1, 	b_2, 	\mathbf{r,	r}, 	\ell, 	b_3)$}.}
-%%\end{figure}
-%}
-
-%\end{columns}
 
 
 \begin{columns}
@@ -542,15 +467,14 @@ Type $\tilD_{n-1}$ cluster algebras ($(n-3)$-gons with $2$ punctures), e.g. type
 
 \TikzAffineDSixTaggedNextToQuiver{0.7}
 \begin{tikzpicture}[scale=0.4]
-\begin{scope}[->,>=stealth',shorten >=1pt,auto,node distance=1.2cm,
-  ultra thick, red]
-  \node (2) {};
-  \node (1) [ right of=2] {};
-  \node (r) [ above of=2, left of=2] {};
-  \node (rp) [ below of =2, left of=2] {};
-  \node (3) [right of=1]{};
-    \node (t) [ above of=3, right of=3] {};
-  \node (tp) [ below of =3, right of=3] {};
+\begin{scope}[->,>=stealth',shorten >=1pt,auto,node distance=1.2cm, ultra thick, red]
+\node (2) {};
+\node (1) [ right of=2] {};
+\node (r) [ above of=2, left of=2] {};
+\node (rp) [ below of =2, left of=2] {};
+\node (3) [right of=1]{};
+\node (t) [ above of=3, right of=3] {};
+\node (tp) [ below of =3, right of=3] {};
   
   \path[every node/.style={font=\sffamily\small}]
     (2) edge (1)
@@ -559,21 +483,19 @@ Type $\tilD_{n-1}$ cluster algebras ($(n-3)$-gons with $2$ punctures), e.g. type
     (3) edge (1)
     (3) edge (tp)
     (3) edge (t);
-  \draw (1) node{$1$};
-  \draw (2) node{$2$};
-  \draw (r) node{$r$};
-   \draw (rp) node{$r^{\bowtie}$};
-     \draw (3) node{$3$};
-     \draw (t) node{$t$};
-   \draw (tp) node{$t^{\bowtie}$};
+\draw (1) node{$1$};
+\draw (2) node{$2$};
+\draw (r) node{$r$};
+\draw (rp) node{$r^{\bowtie}$};
+\draw (3) node{$3$};
+\draw (t) node{$t$};
+\draw (tp) node{$t^{\bowtie}$};
 \end{scope}
 \end{tikzpicture}
 }
 \end{multicols*}
 }
 %\item A version of the $T$-path formula for tagged triangulations.
-
-
 
 %% Text and figure Inside the Block
 %\block{Text and figure Block}{
@@ -588,17 +510,16 @@ Type $\tilD_{n-1}$ cluster algebras ($(n-3)$-gons with $2$ punctures), e.g. type
 %\end{adjustbox}
 %}
 %\column{0.5}
-\block{Acknowledgements.~} {
+%\block{Acknowledgements.~} {
+\note[targetoffsetx=22cm,targetoffsety=-1cm, width=22cm]{
 %We would like to thank Pasha Pylyavskyy, Vic Reiner, and Peter Webb for looking over an early version of this paper, Hugh Thomas for helpful discussions, and the referees for many useful comments. 
-The authors were supported by NSF Grants DMS-1067183 and DMS-1148634.}
-
+The authors were supported by NSF Grants DMS-1067183 and DMS-1148634,
+and would like to thank P. Pylyavskyy, V. Reiner, H. Thomas, and P. Webb.
+Paper to appear in SIGMA.}
 
 \block{References}{
 %\bibliographystyle{authordate1}
     \printbibliography[heading=none]    
    
 }
-
-%\end{columns}
-
 \end{document}

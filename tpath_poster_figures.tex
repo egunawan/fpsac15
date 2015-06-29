@@ -884,7 +884,10 @@ rounded corners = 5pt,
 }
 
 \newcommand\TikzPosterTpathSixNineFontSize{\small}
-\newcommand\TikzTpathSix[1]{
+\newcommand\TikzPosterTpathSixNineCaptionSize{\small}
+\newcommand\TikzPosterTpathSixNineCaptionLocation{(-3,-2.6)}
+
+\newcommand\TikzTpathSix[2]{
 	\begin{tikzpicture} [scale = {#1}]
 	\begin{scope}[rotate=45]
 	\MacroTtwoTpathChubby
@@ -902,6 +905,7 @@ rounded corners = 5pt,
 	\node at (-4,6.3) {\TikzPosterTpathSixNineFontSize $b_4$};
 	\node at (-3,-0.5) {\TikzPosterTpathSixNineFontSize $b_2$};
 	\node at (0.5,3) {\TikzPosterTpathSixNineFontSize $b_3$};
+	\node at \TikzPosterTpathSixNineCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 	\end{tikzpicture}
 }
 
@@ -929,7 +933,7 @@ rounded corners = 5pt,
 	\end{tikzpicture}
 }
 
-\newcommand\TikzTpathSeven[1]{
+\newcommand\TikzTpathSeven[2]{
 	\begin{tikzpicture} [scale = {#1}]
 	\begin{scope}[rotate=45]
 	\MacroTtwoTpathChubby
@@ -946,6 +950,7 @@ rounded corners = 5pt,
 	\node at (-4,6.3) {\TikzPosterTpathSixNineFontSize $b_4$};
 	\node at (-3,-0.5) {\TikzPosterTpathSixNineFontSize $b_2$};
 	\node at (0.5,3) {\TikzPosterTpathSixNineFontSize $b_3$};
+	\node at \TikzPosterTpathSixNineCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 	\end{tikzpicture}
 }
 
@@ -966,17 +971,18 @@ rounded corners = 5pt,
 	\end{scope}
 }
 
-\newcommand\TikzTpathEight[1]{
+\newcommand\TikzTpathEight[2]{
 	\begin{tikzpicture} [scale = {#1}]
 	\MacroTikzTpathEight{1}
 	\node at (-6.2,3) {\TikzPosterTpathSixNineFontSize $b_1$};
 	\node at (0.5,3) {\TikzPosterTpathSixNineFontSize $b_3$};
 	\node at (-4,6.3) {};
 	\node at (-3,-0.5) {};
+	\node at \TikzPosterTpathSixNineCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 	\end{tikzpicture}
 }
 
-\newcommand\TikzTpathNine[1]{
+\newcommand\TikzTpathNine[2]{
 	\begin{tikzpicture} [scale = {#1}]
 	\begin{scope}[rotate=45]
 	\MacroTtwoTpathChubby
@@ -993,6 +999,7 @@ rounded corners = 5pt,
 	\node at (0.5,3) {\TikzPosterTpathSixNineFontSize $b_3$};
 	\node at (-4,6.3) {};
 	\node at (-3,-0.5) {};
+	\node at \TikzPosterTpathSixNineCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 	\end{tikzpicture}
 }
 
@@ -3795,65 +3802,62 @@ node[pos=0.05, below]{$\ga$};
 \MacroDrawBlueDot{0}{-0.3*\Tikzn}
 
 \node at (1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_1$}; 
-
 \node at (1.8*\Tikzn,0) {}; \node at (-1.8*\Tikzn,0) {}; 
 \end{tikzpicture}
 }
-\newcommand\TikzNooseTpathOne[1]{
+
+\newcommand\TikzPosterNooseTpathOneFourCaptionLocation{(0,-3.9)}
+
+\newcommand\TikzNooseTpathOne[2]{
 \begin{tikzpicture}[scale={#1}]
 \MacroNooseTriangulation{gray}
 
 \MacroNooseTpathDrawLabels
 \MacroNooseTPathOne
 \node at (1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_1$}; 
+\node at \TikzPosterNooseTpathOneFourCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 \end{tikzpicture}
 }
-\newcommand\TikzNooseTpathTwo[1]{
+\newcommand\TikzNooseTpathTwo[2]{
 \begin{tikzpicture}[scale={#1}]
 \MacroNooseTriangulation{gray}
 %\draw [TPathStyle,PathArrowAtPosStyleFour] (\Tikzn,\Tikzn) -- (-\Tikzn,\Tikzn); 
-
 \begin{scope}[rotate=90]
 \MacroNooseTPathOne
 \end{scope}
 \MacroNooseTpathDrawLabels
 \node at (0,1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_2$};
 %\MacroDrawBlueDot{0.2*\Tikzn}{0}
-
-
 %\MacroDrawBlueDot{-0.2*\Tikzn}{0}
-
 %\MacroDrawBlueDot{0}{-0.2*\Tikzn}
+\node at \TikzPosterNooseTpathOneFourCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 \end{tikzpicture}
 }
-\newcommand\TikzNooseTpathThree[1]{
+\newcommand\TikzNooseTpathThree[2]{
 \begin{tikzpicture}[scale={#1}]
 \MacroNooseTriangulation{gray}
 %\draw [TPathStyle, PathArrowAtPosStyleFour] (-\Tikzn,\Tikzn) -- (-\Tikzn,-\Tikzn); 
-
 \begin{scope}[rotate=180]
 \MacroNooseTPathOne
 \end{scope}
 \MacroNooseTpathDrawLabels
 \node at (-1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_3$};
 %\MacroDrawBlueDot{0.2*\Tikzn}{0}
-
 %\MacroDrawBlueDot{0}{0.2*\Tikzn}
-
 %\MacroDrawBlueDot{0}{-0.2*\Tikzn}
+\node at \TikzPosterNooseTpathOneFourCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 \end{tikzpicture}
 }
-\newcommand\TikzNooseTpathFour[1]{
+\newcommand\TikzNooseTpathFour[2]{
 \begin{tikzpicture}[scale={#1}]
 \MacroNooseTriangulation{gray}
 %\draw [TPathStyle, PathArrowAtPosStyleFour] (-\Tikzn,-\Tikzn) -- (\Tikzn,-\Tikzn); 
-
-
 \begin{scope}[rotate=-90]
 \MacroNooseTPathOne
 \end{scope}
 \MacroNooseTpathDrawLabels
 \node at (0,-1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_4$};
+\node at \TikzPosterNooseTpathOneFourCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 \end{tikzpicture}
 }
 
@@ -3970,7 +3974,10 @@ node[pos=0.05, below]{$\ga$};
 \node at (-2.3*\Tikzn,0) {}; \node at (2.3*\Tikzn,0) {}; 
 \end{tikzpicture}
 }
-\newcommand\TikzNotNooseTpathOne[1]{
+
+\newcommand\TikzPosterNotNooseTpathOneThreeCaptionLocation{(0,-4.5)}
+
+\newcommand\TikzNotNooseTpathOne[2]{
 \begin{tikzpicture}[scale={#1}]
 \MacroNotNooseTriangulation{gray}
 
@@ -3994,20 +4001,17 @@ node[pos=0.05, below]{$\ga$};
 \MacroNotNooseDrawArcThree{PathArrowAtPosStyleSevenSmall}
 \draw [PathArrowAtPosStyleEnd]  (\Tikzn,-\Tikzn) -- (-\Tikzn,-\Tikzn); \node[black] at (0,-1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_4$};
 \end{scope}
+\node at \TikzPosterNotNooseTpathOneThreeCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 \end{tikzpicture}
 }
-\newcommand\TikzNotNooseTpathTwo[1]{
+\newcommand\TikzNotNooseTpathTwo[2]{
 \begin{tikzpicture}[scale={#1}]
 \MacroNotNooseTriangulation{gray}
 \MacroNotNooseTpathDrawLabels
-
 \begin{scope}[TPathStyle]
 \draw [rounded corners=20pt,PathArrowAtPosStyleSevenSmall] (\Tikzn,-\Tikzn) -- (P) -- (\Tikzn,\Tikzn);
-
 \MacroDrawBlueDot{0.3*\Tikzn}{0}
-
 \draw [PathArrowAtPosStyleFourSmall] (\Tikzn,\Tikzn) -- (-\Tikzn,\Tikzn); \node[black] at (0,1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_2$};
-
 \draw [rounded corners=5pt,PathArrowAtPosStyleSevenSmall] (-\Tikzn,\Tikzn) -- 
 (-0.2*\Tikzn,0.2*\Tikzn) --
 (-0.2*\Tikzn,-0.1*\Tikzn) ;
@@ -4015,30 +4019,25 @@ node[pos=0.05, below]{$\ga$};
 (-0.2*\Tikzn,-0.1*\Tikzn) -- 
 (-0.5*\Tikzn,0) --
 (-\Tikzn,\Tikzn);
-
 \MacroDrawBlueDot{-0.2*\Tikzn}{-0.1*\Tikzn}
-
 \MacroNotNooseDrawArcThree{PathArrowAtPosStyleSevenSmall}
 \draw [PathArrowAtPosStyleEnd]  (\Tikzn,-\Tikzn) -- (-\Tikzn,-\Tikzn); \node[black] at (0,-1.3*\Tikzn) {\TikzPosterTpathSixNineFontSize $b_4$};
 \end{scope}
+\node at \TikzPosterNotNooseTpathOneThreeCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 \end{tikzpicture}
 }
-\newcommand\TikzNotNooseTpathThree[1]{
+\newcommand\TikzNotNooseTpathThree[2]{
 \begin{tikzpicture}[scale={#1}]
 \MacroNotNooseTriangulation{gray}
 \MacroNotNooseTpathDrawLabels
-
 \begin{scope}[TPathStyle]
 \draw [rounded corners=20pt,PathArrowAtPosStyleFourSmall] (\Tikzn,-\Tikzn) -- (P) -- (\Tikzn,0.95*\Tikzn);
-
 \MacroDrawBlueDot{0.3*\Tikzn}{0}
-
 \draw [TPathStyle,rounded corners=20pt,PathArrowAtPosStyleEightSmall] (0.9*\Tikzn,0.99*\Tikzn) -- (P) -- (-0.9*\Tikzn,0.9*\Tikzn);
 \MacroDrawBlueDot{0}{0.3*\Tikzn}
-
 \draw [TPathStyle, PathArrowAtPosStyleEnd] (-\Tikzn,\Tikzn) -- (-\Tikzn,-\Tikzn); \node[black] at (-1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_3$};
-
 \end{scope}
+\node at \TikzPosterNotNooseTpathOneThreeCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 \end{tikzpicture}
 }
 
