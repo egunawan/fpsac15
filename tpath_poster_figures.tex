@@ -1,4 +1,4 @@
-% !TEX root = temptikz.tex
+% !TEX root = poster.tex
 
 \usepackage{tikz,tikz-cd} % 
 \usetikzlibrary{arrows,shapes,trees}
@@ -4212,13 +4212,13 @@ node[pos=0.05, below]{$\ga$};
  }
 
 \newcommand\TikzNoose[1]{
-\begin{tikzpicture}[scale={#1}]
+\begin{tikzpicture}[scale={#1}, rotate=90]
 \draw[style = very thick, rounded corners = 5pt]	
 	(0,0) .. controls (-0.5,1) and (-1,2) .. (0,3) .. 
 	controls (1,2)  and (0.5,1) .. (0,0); %node[pos=0.5, right] {$\ell$};
 	\draw [fill=olive] (0,0) circle (.6ex);
 \draw [fill=violet] (0,2) circle (1.2*\TikzPunctureActualSize);
-\draw (-1.6,2) node {$\ell$};
+\draw (0,4) node {$\ell$};
 \end{tikzpicture}
 }
 
