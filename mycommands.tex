@@ -1,0 +1,169 @@
+%\documentclass{amsart}
+%\pagestyle{plain}
+%\setlength{\parskip}{0in}
+%\setlength{\textwidth}{6.8in}
+%\setlength{\topmargin}{-.5in}
+%\setlength{\textheight}{9.3in}
+%\setlength{\parindent}{.25in}
+%\setlength{\oddsidemargin}{-.7cm}
+%\setlength{\evensidemargin}{-.7cm}
+%
+%
+%\usepackage{graphicx}
+%\usepackage{amsmath, amssymb, amsbsy}
+%\usepackage{subfigure}
+%%\usepackage{caption}
+%%\usepackage{subcaption}
+%
+%\usepackage{amsthm}
+%\usepackage{mdwlist} % To put a sentence in the middle of enumerate
+%\usepackage{enumerate} % To use roman numerals in enumerate
+%\usepackage{multicol} % to break a list into multiple columns
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+ 
+\urlstyle{same}
+
+%\theoremstyle{plain}
+%\newtheorem{theorem}{Theorem}[section]
+%
+%\theoremstyle{definition}
+%\newtheorem{remark}[theorem]{Remark}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{definition}[theorem]{Definition}
+%\newtheorem{notation}[theorem]{Notation}
+%\newtheorem{example}[theorem]{Example}
+%\newtheorem{proposition}[theorem]{Proposition}
+
+\numberwithin{equation}{section} % If you want equations to be numbered like (5.1), (5.2), ...
+
+\newcommand\notch{^{(p)}}
+\newcommand \tilblacktri[1]{\widetilde{\triangle}_{#1}}
+\newcommand \blacktri[1]{\triangle_{#1}}
+\newcommand \tiltaui[1] {\widetilde{\tau}_{i_{#1}}} 
+\newcommand \taui[1] {\tau_{i_{#1}}}
+
+
+\newcommand \al {\alpha} \newcommand \be {\beta}
+\newcommand\ga{\gamma}  \newcommand\Ga{\Gamma}
+\newcommand\ta{\tau } \newcommand\si{\sigma}  \newcommand\Si{\Sigma} 
+\newcommand \om {w} \newcommand \oom {$w$}
+\newcommand\Cn{\mathcal{C}_n}
+\newcommand\Surf{S}
+\newcommand\Cnn[1]{\mathcal{C}_{#1}}
+\newcommand\Z{\mathbb{Z}}
+\newcommand\B{\mathcal B} 
+\newcommand\AAA {\mathcal A}
+
+\newcommand\tgk{\tau_{[\ga_k]}}
+\newcommand\tbk{\tau_{[\be_k]}}
+\newcommand\tgl{\tau_{[\ga_\ell]}} 
+\newcommand \llrrl {\ell, \ell, r, r, \ell} \newcommand \lrrll {\ell, r, r, \ell, \ell}
+\newcommand\rrBak{\underline{r, r}}
+\newcommand\rrNon{\mathbf{r, r}}
+\newcommand\ttBak{\underline{\tau, \tau}}
+\newcommand\ttNon{\boldsymbol{\tau, \tau}}
+\newcommand\ttQuasi{\overline{\tau, \tau}}
+\newcommand\dotRR{\dot{\textbf{r}}, \textbf{r}}
+\newcommand\RddotR{\textbf{r}, \ddot{\textbf{r}}}
+\newcommand\GT {G_{T^o,\ga}}
+\newcommand\overGT {\overline{G}_{T^o,\ga}}
+\newcommand\puncture{\text{\small $P$}}
+\newcommand\Quad[1]{Quad{(#1)}}
+
+\newcommand \tilp {\widetilde{p}} \newcommand \tilP {\widetilde{P}} 
+\newcommand\tilv{\widetilde{v}} \newcommand\tily{\widetilde{y}} \newcommand\tilz{\widetilde{z}}
+\newcommand\tilt{\tilde{t}} \newcommand\tils{\tilde{s}} \newcommand\tilr{\widetilde{r}} \newcommand\tilell {\widetilde{\ell}}
+\newcommand\tilS{\widetilde{\Sga}}  \newcommand\Sga{S_\ga} 
+\newcommand\tilA{\widetilde{A}} \newcommand\tilD{\widetilde{D}}
+\newcommand\tilga{\widetilde{\ga}} 
+\newcommand\tilsi{\widetilde{\si}} 
+\newcommand\tilw{\widetilde{\om}} 
+\newcommand\tilal{\widetilde{\al}}
+\newcommand\tilbe{\widetilde{\be}} 
+\newcommand\tillam{\widetilde{\lambda}} 
+%\newcommand\tiltheta{\widetilde{\theta}} 
+%\newcommand\tilrho{\widetilde{\rho}} 
+\newcommand\tiltau{\widetilde{\tau}} 
+%\newcommand\tilom{\widetilde{\om}}
+ \newcommand\tilom{\widetilde{\om}}
+\newcommand\overpi{\overline{\pi}} 
+\newcommand\tilT{\widetilde{T}}
+\newcommand\tilTo{\widetilde{T^o}}
+\def\a{\aleph}
+\def\b{\text{\tiny $\beth$}}
+\newcommand\ccr{r^{cc}}
+\newcommand\bijection{\longleftrightarrow}
+
+\newcommand\ts[1]{\tau_{[\si_{#1}]}} 
+\newcommand\tg[1]{\tau_{[\ga_{#1}]}} 
+\newcommand\tb[1]{\tau_{[\be_{#1}]}} 
+\newcommand\tiltg[1]{\widetilde{\tau}_{[\ga_{#1}]}}
+\newcommand \pkpkone[1] {[p_k,p_{k+1}]_{#1}}
+\newcommand\pipjOm[2]{[p_{#1}, \dots, p_{#2}]_{\om}}
+%\newcommand\overom{\overline{\om}}
+\newcommand\overom{\bar{\om}}
+%\newcommand \pjpjone[1] {[p_j,p_{j+1}]_{#1}} % for consistency always use k!!! not j
+\newcommand\disk[1]{\textbf{Disk}_{#1}}
+%\newcommand\tildisk[1]{\widetilde{\textbf{Disk}_{#1}}}
+\newcommand\tildisk[1]{\textbf{Disk}_{\widetilde{#1}}}
+%\newcommand\tildiskplus[2]{\widetilde{\textbf{Disk}_{#1}^{#2}}}
+\newcommand\tildiskplus[2]{\textbf{Disk}_{\widetilde{#1}}^{#2}}
+\newcommand\outsidedisk[1]{\textbf{C}_{#1}}
+
+
+%\newcommand\TpathOne{(b_4, 	1, 	b_2, 	2, 	b_3, 		\ell, 	b_3)}
+\newcommand\TpathCompleteOne{(b_4, 	1, 	b_2, 	2, 	b_3, 		\ell, 	\underline{r, 		r}, 	\underline{\ell, 		\ell}, 	b_3)}
+\newcommand\PMOne{(b_4, 	 	b_2, 	 	b_3, 		 		r, 	\ell, 	b_3)}
+
+%\newcommand\TpathTwo{(b_4, 	2, 	b_3)}
+\newcommand\TpathCompleteTwo{(b_4, 	\underline{1,	1}, 	2, 	\underline{\ell, 		\ell}, 	\underline{r, 		r}, 	\underline{\ell, 		\ell}, 	b_3)}
+\newcommand\PMTwo{(b_4, 	1, 	\ell, 	r, 	\ell, 	b_3)}
+
+\newcommand\TpathThree{(b_1, 1, 2, \ell, 	2)}
+\newcommand\TpathCompleteThree{(b_1, 	1, 	\underline{2, 	2}, 	2, 		\underline{\ell, 	\ell}, 		\underline{r,	r}, 		\ell, 	2)}
+\newcommand\PMThree{(b_1,	2,2,\ell, r, 2)}
+
+%\newcommand\TpathFour{(b_1, 1, b_3, \ell, b_3)}
+\newcommand\TpathCompleteFour{(b_1, 	1, 	\underline{2, 	2}, 	b_3, 		\ell, 	\underline{r, 		r},	\underline{\ell, 		\ell}, 	b_3)}
+\newcommand\PMFour{(b_1, 2, b_3, r,\ell, b_3)}
+
+%\newcommand\TpathFive{(b_4, 1, b_2, \ell, 2)}
+\newcommand\TpathCompleteFive{(b_4, 	1, 	b_2, 	\underline{2, 	2}, 		\underline{\ell, 	\ell}, 		\underline{r,	r}, 		\ell, 	2)}
+\newcommand\PMFive{(b_4, b_2, 2, \ell,r,2)}
+
+%\newcommand\TpathSix{(b_4, 1, b_2, {\bf r, {r}}, \ell, b_3)}
+\newcommand\TpathCompleteSix{(b_4, 	1, 	b_2, \underline{2, 	2}, 		\underline{\ell, 	\ell},	\rrNon, 	\ell, 	b_3)} % \ddot{r}, 	\ell, 	b_3),}
+\newcommand\TpathCompleteSixDollar{$(b_4$,$1$,$b_2$,\underline{$2$,$2$},\underline{$\ell$,$\ell$},$\rrNon$,$\ell$,$b_3)$} % \ddot{r}, 	\ell, 	b_3),}
+\newcommand\tilSpathCompleteSix{(b_4, 	1, 	b_2, \underline{2, 	2}, 		\underline{\ell, 	\ell},		\RddotR, 	\ell, 	b_3)} % \ddot{r}, 	\ell, 	b_3),}
+\newcommand\PMSix{(b_4, 	b_2,2,	\ell,	\ddot{r},	\ell, 	b_3)} 
+
+%\newcommand\TpathSeven{(b_4, 1, b_2, \ell,{\bf {r}},{\bf {r}}, b_3)}
+\newcommand\TpathCompleteSeven{(b_4, 	1, 	b_2, \underline{2, 	2}, 		\ell, 	\rrNon,	\underline{\ell, 		\ell}, 	b_3)} %, %\dot{r}, 	r,	\ell, 		\ell, 	b_3)}
+\newcommand\TpathCompleteSevenDollar{$(b_4$,$1$,$b_2$,\underline{$2$,$2$},$\ell$,$\rrNon$,	\underline{$\ell$,$\ell$},$b_3)$} %, %\dot{r}, 	r,	\ell, 		\ell, 	b_3)}
+\newcommand\tilSpathCompleteSeven{(b_4, 	1, 	b_2, \underline{2, 	2}, 		\ell, 	\dotRR,	\underline{\ell, 		\ell}, 	b_3)}
+\newcommand\PMSeven{(b_4, b_2, 2, \dot{r}, \ell, b_3)}
+
+
+%\newcommand\TpathEight{(b_1, 1, 2, {\bf r, {r}}, \ell, b_3)}
+\newcommand\TpathCompleteEight{(b_1,1,	\underline{2, 2}, 	2, 		\underline{\ell, 	\ell}, 		\rrNon, \ell, 	b_3)}
+\newcommand\TpathCompleteEightDollar{$(b_1$,$1$,\underline{$2$, $2$},$2$,\underline{$\ell$, 	$\ell$},$\rrNon$, $\ell$,$b_3)$}
+%\newcommand\TpathCompleteEight{($b_1$, 	$1$,	\underline{$2$, $2$}, 	$2$, 		\underline{$\ell$, 	$\ell$}, 		$\rrNon$, $\ell$, 	$b_3$)} %, % \ddot{r}, 	\ell, 	b_3)}
+
+%\newcommand\tilSpathCompleteEight{($b_1$, 	$1$, 	\underline{$2$, $2$}, 	$2$, 		\underline{$\ell$, 	$\ell$}, 		$\RddotR$, 	$\ell$, 	$b_3$)}
+\newcommand\tilSpathCompleteEight{(b_1, 	1, 	\underline{2, 2}, 	2, 		\underline{\ell, 	\ell}, 		\RddotR, 	\ell, 	b_3)}
+
+\newcommand\PMEight{(b_1, 2,2, \ell,	\ddot{r}, b_3)}
+
+%\newcommand\TpathNine{(b_1, 1, 2, \ell, {\bf{r}, r}, b_3)}
+\newcommand\TpathCompleteNine{(b_1, 	1, 	\underline{2, 	2}, 	2, 		\ell, 	{\bf {r}, 	r},	\underline{\ell, 		\ell}, 	b_3)} %. %\dot{r}, 	r,	\ell, 		\ell, 	b_3)}
+\newcommand\TpathCompleteNineDollar{$(b_1$,$1$,\underline{$2$, $2$},$2$,$\ell$,$\rrNon$,	\underline{$\ell$,$\ell$},$b_3)$} %. %\dot{r}, 	r,	\ell, 		\ell, 	b_3)}
+\newcommand\tilSpathCompleteNine{(b_1, 	1, 	\underline{2, 	2}, 	2, 		\ell, 	\dotRR,	\underline{\ell, 		\ell}, 	b_3)} %. %\dot{r}, 	r,	\ell, 		\ell, 	b_3)}
+
+\newcommand\PMNine{(b_1, 2, 2, \dot{r}, \ell, b_3)}
