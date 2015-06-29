@@ -4284,8 +4284,8 @@ node[pos=0.05, below]{$\ga$};
  
 \newcommand\MacroTikzDNorth{
 \MacroTikzDFourClustersTriangle{north}
-\draw ($(L)+(north)$) -- node[below, pos=0.6]{\small $x_1$} ($(P)+(north)$) -- node[below, pos=0.3]{\small $x_2$} ($(R)+(north)$);
-\draw[rounded corners=10pt] ($(L)+(north)$) -- ($(0,\TikzH*0.5)+(north)$) node[above,pos=0.95]{\small $x_0$} -- ($(R)+(north)$);
+\draw ($(L)+(north)$) -- node[pos=0.7,red]{\small $x_1$} ($(P)+(north)$) -- node[pos=0.4, blue]{\small $x_2$} ($(R)+(north)$);
+\draw[rounded corners=10pt] ($(L)+(north)$) -- ($(0,\TikzH*0.5)+(north)$) node[pos=1,brown]{\small $x_0$} -- ($(R)+(north)$);
  }
  
  \newcommand\MacroTikzDWest{
