@@ -159,7 +159,7 @@ that are pairwise ``compatible''.
 }
 \end{multicols*}
 
-\innerblock{Theorem (Fomin - Shapiro - Thurston, 2006)}{
+\innerblock{Theorem (Fomin, Shapiro, and Thurston, 2006)}{
 
 One can define a cluster algebra from a Riemann 
 surface $+$ interior points (called \emph{punctures}) and/or
@@ -266,6 +266,7 @@ This example corresponds to \\
 {
 %\coloredbox{
 We extend Schiffler - Thomas' $T$-path definition and formula for unpunctured surfaces (2009). 
+Let $T^o$ be an ideal triangulation (of an unpunctured surface or a once-punctured disk) and an arc $\ga$ that crosses $T^o$.
 %We expect to generalize this to other punctured surfaces.
 %}
 
@@ -279,7 +280,7 @@ If $\tau$ is not adjacent to the puncture, let the associated quasi-arc be $\tau
 %Otherwise, we let the associated quasi-arc be $\tau$ itself.
 }
 \innerblock{Definition: $T$-path}{
-Let $T^o$ be an ideal triangulation (of an unpunctured surface or a once-punctured disk) and an arc $\ga$ that crosses $T^o$.
+%Let $T^o$ be an ideal triangulation (of an unpunctured surface or a once-punctured disk) and an arc $\ga$ that crosses $T^o$.
 A \emph{complete $(T^o,\gamma)$-path} (or \emph{$T^o$-path} for short) $\om = (\om_1, \dots, \om_{2d+1})$
 is a concatenation of quasi-arcs and boundary edges such that:
 \begin{itemize}
@@ -427,18 +428,21 @@ Each path is homotopic to $\ga$ and satisfies (T1) but fails (T2) or (T3).
 
 \begin{columns}
 
-\column{0.5}
+\column{0.45}
 %\block{Application of $T$-paths: atomic basis proof} {
-\block{What is the atomic basis?}
+%\block{What is the atomic basis?}
+\block{Definition: Atomic Bases and Cluster Monomials}
 %\innerblock{What is the atomic basis?}%[Proper Laurent monomial property of cluster monomials]
-{Let $\mathcal{A}$ be a cluster algebra.
+{
+%\innerblock{Definition: atomic bases and cluster monomials}{
+Let $\mathcal{A}$ be a (coefficient-free) cluster algebra.
 \begin{itemize}
- \item The \emph{positive cone} is
+ \item The \emph{positive cone} of $\mathcal{A}$ is
  $\{$positive elemets$\}$ = 
   $\{$elements that are positive Laurent polynomials %when expanded
  with respect to any cluster$\}$.
   
-\item The subset $\mathcal{B}$ of all indecomposable positive elements (\it{i.e.}, those that cannot be written as a sum of two positive elements)
+\item The subset $\mathcal{B}$ of all indecomposable positive elements (\textit{i.e.}, those that cannot be written as a sum of two positive elements)
 is called the \emph{atomic basis} if it forms a $\mathbb{Z}$-basis of $\mathcal{A}$.
 
  
@@ -446,28 +450,38 @@ is called the \emph{atomic basis} if it forms a $\mathbb{Z}$-basis of $\mathcal{
 %\item A \emph{cluster monomial} is a monomial in a cluster,
 e.g. $a^{5}be^2$ is a cluster monomial if $\{a,b,c,d,e \}$ is a cluster.
 
-If $\mathcal{A}$ comes from a surface, a cluster monomial corresponds to a multi-tagged dissection D (i.e. a partial tagged triangulation allowing multiple copies of tagged arcs).
+%If $\mathcal{A}$ comes from a surface, a cluster monomial corresponds to a multi-tagged dissection D (i.e. a partial tagged triangulation allowing multiple copies of tagged arcs).
 % We define xD = ??D x?.
  \end{itemize}
+% }
  }
-\column{0.5}
+ \note[width=18.5cm, angle=-25,%connection, 
+ targetoffsety=-0.5cm,targetoffsetx=2cm]{%If $\mathcal{A}$ comes from a surface, 
+ A cluster monomial corresponds to a multi-tagged dissection D (\textit{i.e.} a partial tagged triangulation allowing multiple copies of tagged arcs).}
+\column{0.55}
 
-\block{Result 2: combinatorial proof for type $D$ cluster algebras}{
+\block{Result 2: %combinatorial 
+$T$-path proof for type $D$ cluster algebras}{
 
 %Result 2: Combinatorial proof of atomic basis for type $D$% cluster algebras
 %Application of $T$-path formula: a purely combinatorial proof of the proper Laurent monomial property of a cluster algebra of type $D$.
 
-We give a combinatorial proof (using the $T$-path formula) for the following.
+%We give a combinatorial proof (using the $T$-path formula) for the following.
 %\end{result2}
-\innerblock{theorem}{% (Cerulli Irelli, 2011)}{
-For a cluster algebra of type $D$, the basis of cluster monomials is atomic.}
+\innerblock{Theorem (atomic basis)}{% (Cerulli Irelli, 2011)}{
+For a cluster algebra of type $A$, $D$, and $E$, the basis of cluster monomials is atomic.}
 %\end{theorem}
 %\innerblock{remark}{
-\begin{itemize}
+\begin{enumerate}[-]
 %\item Cerulli Irelli (2011) gives a representation theory proof which works for all finite type cluster algebras.
-\item \cite[Cerulli Irelli, 2011]{Cer11} and {[Cerulli Irelli, Keller, Labardini-Fragoso, and Plamondon, 2012)]} give a representation theory proof which works for all finite type cluster algebras.
-\item Our proof is inspired by Dupont - Thomas' work for type $A$ and $\widetilde{A}$ cluster algebras.
-\end{itemize}
+\item %\cite[Cerulli Irelli, 2011]{Cer11} and 
+Representation theory proof by {[Cerulli Irelli, 2011]]} and
+{[Cerulli Irelli, Keller, Labardini-Fragoso, and Plamondon, 2012]}
+\item We give a combinatorial proof (using the $T$-path formula) for type $D$,
+inspired by work on types $A$ and $\widetilde{A}$ by {[Dupont and Thomas, 2011]}.
+
+%\item Our proof is inspired by {[Dupont and Thomas, 2011]} for type $A$ and $\widetilde{A}$ cluster algebras.
+\end{enumerate}
 %\end{remark}
 %}
 }
@@ -476,9 +490,9 @@ For a cluster algebra of type $D$, the basis of cluster monomials is atomic.}
 
 %\begin{columns} \column{0.5} 
 
-\block{Atomic bases for other surfaces}
+\block{Atomic bases for other surfaces (with $2$ or more marked points)}
 {\begin{multicols*}{2}
-\innerblock{Conjecture (Fomin - Shapiro - Thurston)}{
+\innerblock{Conjecture (Fomin, Shapiro, and Thurston, 2006)}{
 A candidate for atomic bases:
 the \emph{``bracelets collection"} consisting of all cluster monomials %plus
 $+$ a class of elements.
@@ -489,17 +503,17 @@ closed loop in the interior of the surface which avoids marked points.
 % (type $\widetilde{A}$), and once-punctured disks (type $D$)).)
 %(Only proven for disks (type $A$), annuli (type $\widetilde{A}$), and once-punctured disks (type $D$)).)
 %\end{conjecture}
-
-
-\begin{itemize}
-\item True for annuli, type $\widetilde{A}$ (Dupont - Thomas, 2011).
-\item The bracelets collection forms a basis for 
-unpunctured surfaces (Musiker, Schiffler, and Williams, 2011).
-\end{itemize}
 }
 
+\begin{enumerate}[-]
+\item True for annuli, type $\widetilde{A}$ (Dupont and Thomas, 2011).
+\item The bracelets collection forms a basis for 
+unpunctured surfaces (Musiker, Schiffler, and Williams, 2011).
+\end{enumerate}
+%}
+
 \innerblock{Current work}{
-Type $\tilD_{n-1}$ cluster algebras ($(n-3)$-gons with $2$ punctures), e.g. type $\tilD_{6}$ cluster algebra comes from a square with $2$ punctures.
+Type $\tilD_{n-1}$ cluster algebras ($(n-3)$-gons with $2$ punctures), \textit{e.g.} type $\tilD_{6}$ cluster algebra comes from a square with $2$ punctures.
 
 \TikzAffineDSixTaggedNextToQuiver{0.7}
 \begin{tikzpicture}[scale=0.4]

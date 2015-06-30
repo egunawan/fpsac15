@@ -4207,32 +4207,33 @@ node[pos=0.05, below]{$\ga$};
 %\MacroTtwoTriangulationCoordinatesForDrawingQuiver
 \newcommand\TikzH{4}
 \newcommand\TikzW{6}
+\newcommand\localfontsize{\small}
 \coordinate (topright) at (\TikzW,\TikzH);
 \draw[style = thick]  (0,0) rectangle (topright); 
-\draw [style = thick] (0,0) ..  controls(5.5,0.4) and (1,3.9) .. (topright) node[pos=0.5,above]{$1$};  % the right most peripheral arc
-\draw [style = thick] (0,0) ..  controls (3,1) and (3,3.9)   .. (0,\TikzH)  node[pos=0.7,right]{$2$}; 
-\draw[style = thick] (0,\TikzH) .. controls (0.8,1) and (1,2) .. (1.2,2.2) node[pos=0.3,right]{$r$};  % the bridging (tagged plain) arc
-\draw[style = ultra thick, gray] (0,4) -- (1.2,2.2) node[pos=0.3, left] {$r$};  % r bowtie
+\draw [style = thick] (0,0) ..  controls(5.5,0.4) and (1,3.9) .. (topright) node[pos=0.5,above]{\localfontsize $1$};  % the right most peripheral arc
+\draw [style = thick] (0,0) ..  controls (3,1) and (3,3.9)   .. (0,\TikzH)  node[pos=0.7,right]{\localfontsize $2$}; 
+\draw[style = thick] (0,\TikzH) .. controls (0.8,1) and (1,2) .. (1.2,2.2) node[pos=0.3,below]{\localfontsize $r$};  % the bridging (tagged plain) arc
+\draw[style = ultra thick, gray] (0,4) -- (1.2,2.2) node[pos=0.3, right] {\localfontsize $r$};  % r bowtie
 % the briding (tagged notched) arc
 \path[fill, gray] (1,2.5) -- (1.1,2.8) -- (1.3,2.5) -- cycle; % the notching (right)
 \path[fill, gray] (1,2.5) -- (0.9,2.2) -- (0.7,2.5) -- cycle; % the notching (left)
 
 \coordinate (rightpuncture) at (\TikzW*0.8,\TikzH/2);
-\draw [style = thick] (\TikzW,0) ..  controls (3.3,0.5) and (3.3,3.5)   .. (\TikzW,\TikzH)  node[pos=0.3,left]{$3$}; 
-\draw[style = thick] (\TikzW,0) .. controls (\TikzW*0.95,0.2) and (\TikzW*0.95,\TikzH*0.8) .. (rightpuncture) node[pos=0.65,right]{$t$};  % the bridging (tagged plain) arc
-\draw[style = ultra thick, gray] (\TikzW,0) -- (rightpuncture) node[pos=0.3, left] {$t$};  % r bowtie
+\draw [style = thick] (\TikzW,0) ..  controls (3.3,0.5) and (3.3,3.5)   .. (\TikzW,\TikzH)  node[pos=0.3,left]{\localfontsize $3$}; 
+\draw[style = thick] (\TikzW,0) .. controls (\TikzW*0.95,0.2) and (\TikzW*0.95,\TikzH*0.8) .. (rightpuncture) node[pos=0.5,right]{$t$};  % the bridging (tagged plain) arc
+\draw[style = ultra thick, gray] (\TikzW,0) -- (rightpuncture) node[pos=0.3, left] {\localfontsize $t$};  % r bowtie
 
 \newcommand\TikzTPW{\TikzW*0.85}
 \newcommand\TikzTPH{\TikzH*0.25}
 \path[fill, gray] (\TikzTPW,\TikzTPH+0.5) -- (\TikzTPW-0.1,\TikzTPH+0.2) -- (\TikzTPW-0.3,\TikzTPH+0.5) -- cycle; % the notching (left)
 \path[fill, gray] (\TikzTPW,\TikzTPH+0.5) -- (\TikzTPW+0.1,\TikzTPH+0.8) -- (\TikzTPW+0.3,\TikzTPH+0.5) -- cycle; % the notching (right)
 
- \draw [fill=green] (0,0) circle (.6ex);
-\draw [fill=green] (0,\TikzH) circle (.6ex);
-\draw [fill=green] (\TikzW,0) circle (.6ex);
-\draw [fill=green] (topright) circle (.6ex);
-\draw [fill=violet] (1.2,2.2) circle (.6ex); %puncture
-\draw [fill=violet] (rightpuncture) circle (.6ex); %puncture
+ \draw [fill=green] (0,0) circle (.3ex);
+\draw [fill=green] (0,\TikzH) circle (.3ex);
+\draw [fill=green] (\TikzW,0) circle (.3ex);
+\draw [fill=green] (topright) circle (.3ex);
+\draw [fill=violet] (1.2,2.2) circle (.3ex); %puncture
+\draw [fill=violet] (rightpuncture) circle (.3ex); %puncture
 \end{scope}
 }
 
