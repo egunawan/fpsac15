@@ -129,7 +129,7 @@ such that $\gamma$ does not cross itself or the boundary, and $\gamma$ is not ho
 %\item $\gamma$ does not cross itself or the boundary of $S$
 %\item $\gamma$ is not homotopic to a boundary edge.
 %\end{itemize} 
-\item A loop \TikzNoose{0.4} that cuts out a monogon with $1$ puncture is called a \emph{noose}.
+%\item A loop \TikzNoose{0.4} that cuts out a monogon with $1$ puncture is called a \emph{noose}.
 
 \item An \emph{ideal triangulation} is a maximum collection of distinct arcs that pairwise do not cross.
 \end{itemize}
@@ -142,10 +142,10 @@ such that $\gamma$ does not cross itself or the boundary, and $\gamma$ is not ho
 }
 
 \innerblock{Definition: tagged arcs}{
-
 \begin{itemize}
 \item A \emph{tagged arc} 
-is an ordinary arc (not a noose) decorated (plain or with a $\bowtie$) at each endpoint.
+is an ordinary arc (which does not cut out a monogon with $1$ puncture \TikzNoose{0.4}) 
+decorated (plain or with a $\bowtie$) at each endpoint.
 %is obtained by making each endpoint of an ordinary arc (that is not a noose)
 %either plain or notched (indicated by a bow tie).
 
@@ -188,7 +188,8 @@ marked points on the boundary:
 \end{tikzfigure}
 }
 \column{0.35}
-\block{Example: once-punctured $4$-gon \OncePuncturedSquare{0.25}}{
+\block{Example: once-punctured $4$-gon%\OncePuncturedSquare{0.25}
+}{
 A tagged triangulation of a once-punctured square $\longleftrightarrow$ A quiver that is mutation equivalent to an orientation of a type $D_4$ Dynkin diagram.
 
 \TikzTtwoTaggedNextToQuiver{0.7}
