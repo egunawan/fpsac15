@@ -4055,11 +4055,11 @@ node[pos=0.05, below]{$\ga$};
    \coordinate(x) at (0,4);  \coordinate(z) at (4,4);
  }
 \newcommand \MacroTtwoTriangulationVerticesForDrawingQuiver{
- \draw [fill=green] (0,0) circle (.6ex);
-\draw [fill=green] (0,4) circle (.6ex);
-\draw [fill=green] (4,0) circle (.6ex);
-\draw [fill=green] (4,4) circle (.6ex);
-\draw [fill=violet] (1.2,2.2) circle (.6ex); %puncture
+ \draw [fill=green] (0,0) circle (.3ex);
+\draw [fill=green] (0,4) circle (.3ex);
+\draw [fill=green] (4,0) circle (.3ex);
+\draw [fill=green] (4,4) circle (.3ex);
+\draw [fill=violet] (1.2,2.2) circle (.3ex); %puncture
   }
 %%%%%%%%%%%
 
@@ -4102,35 +4102,33 @@ node[pos=0.05, below]{$\ga$};
 \end{tikzpicture}
  }
  
-   \newcommand \MacroTikzToneWithBowtiesNoLabel{ %Draw the triangulation where the arcs are labeled 1,2,3,4
+\newcommand \MacroTikzToneWithBowtiesNoLabel{ %Draw the triangulation where the arcs are labeled 1,2,3,4
+ 
+ \begin{scope}[style=thick]
 \draw[style = thick]  (0,0) rectangle (4,4);
 \draw [style = thick] (0,0) ..  controls(3.5,0.4) and (3.5,2) .. %node[pos =0.4,right=2pt] {$1$} 
  (4,4);
 \draw [style = thick] (0,0) ..  controls (3.7,1) and (3.8,3.9)   .. %node[pos =0.4,left=2pt] {$2$}  
 (0,4);
-\draw[style = thick] (0,4) -- %node[pos =0.3,right=1pt] {$3$}  
-(1.2,2.2);
-\draw[style = thick] (1.2,2.2) -- %node[pos =0.4,right=1pt] {$4$}  
-(0,0);
-\draw [fill=violet] (1.2,2.2) circle (.7ex); %puncture
-\draw [fill=green] (0,0) circle (.6ex);
-\draw [fill=green] (0,4) circle (.6ex);
-\draw [fill=green] (4,0) circle (.6ex);
-\draw [fill=green] (4,4) circle (.6ex);
+\draw[style = thick] (0,4) -- (1.2,2.2);
+\draw[style = thick] (1.2,2.2) --  (0,0);
+\draw (1,2.5) -- (1.1,2.8) -- (1.3,2.5) -- cycle; % the top notching (right)
+\draw (1,2.5) -- (0.9,2.2) -- (0.7,2.5) -- cycle; % the top notching (left)
+\draw (1,1.9) -- (1.1,1.6) -- (1.3,1.9) -- cycle; % the bottom notching (right)
+\draw (1,1.9) -- (0.9,2.2) -- (0.7,1.9) -- cycle; % the bottom notching (left)
+\end{scope}
+\draw [fill=violet] (1.2,2.2) circle (.3ex); %puncture
+\draw [fill=green] (0,0) circle (.3ex);
+\draw [fill=green] (0,4) circle (.3ex);
+\draw [fill=green] (4,0) circle (.3ex);
+\draw [fill=green] (4,4) circle (.3ex);
+}
 
-
- \path[fill] (1,2.5) -- (1.1,2.8) -- (1.3,2.5) -- cycle; % the top notching (right)
-\path[fill] (1,2.5) -- (0.9,2.2) -- (0.7,2.5) -- cycle; % the top notching (left)
-
- \path[fill] (1,1.9) -- (1.1,1.6) -- (1.3,1.9) -- cycle; % the bottom notching (right)
-\path[fill] (1,1.9) -- (0.9,2.2) -- (0.7,1.9) -- cycle; % the bottom notching (left)
- }
-
-  \newcommand  \TikzToneBowtiesOnly[1]{
- \begin{tikzpicture} [scale=#1]
+\newcommand  \TikzToneBowtiesOnly[1]{
+\begin{tikzpicture} [scale=#1]
 \MacroTikzToneWithBowtiesNoLabel %Draw the triangulation where the arcs are labeled 1,2,3,4
 \end{tikzpicture}
-  }
+}
 
 % Just a once-punctured square
 \newcommand \OncePuncturedSquare[1]{
@@ -4145,14 +4143,15 @@ node[pos=0.05, below]{$\ga$};
 \begin{tikzpicture}[scale=#1] %% T2 triangulation tagged
 \MacroTtwoTriangulationCoordinatesForDrawingQuiver
 
-\draw[style = thick]  (0,0) rectangle (4,4); 
-\draw [style = thick] (0,0) ..  controls(3.5,0.4) and (3.5,2) .. (4,4); % the right most peripheral arc
-\draw [style = thick] (0,0) ..  controls (3.7,1) and (3.8,3.9)   .. (0,4); % the middle arc 
-\draw[style = thick] (0,4) .. controls (0.8,1) and (1,2) .. (1.2,2.2);  % the radius (tagged plain) arc
-\draw[style = very thick] (0,4) -- (1.2,2.2) node[pos=0.5, right=1pt] {$\iota(\ell)$};  
-\path[fill] (1,2.5) -- (1.1,2.8) -- (1.3,2.5) -- cycle; % the notching (right)
-\path[fill] (1,2.5) -- (0.9,2.2) -- (0.7,2.5) -- cycle; % the notching (left)
-
+\begin{scope}[style=thick]
+\draw (0,0) rectangle (4,4); 
+\draw (0,0) ..  controls(3.5,0.4) and (3.5,2) .. (4,4); % the right most peripheral arc
+\draw (0,0) ..  controls (3.7,1) and (3.8,3.9)   .. (0,4); % the middle arc 
+\draw (0,4) .. controls (0.8,1) and (1,2) .. (1.2,2.2);  % the radius (tagged plain) arc
+\draw (0,4) -- (1.2,2.2);% node[pos=0.5, right=1pt] {$\iota(\ell)$};  
+\draw (1,2.5) -- (1.1,2.8) -- (1.3,2.5) -- cycle; % the notching (right)
+\draw (1,2.5) -- (0.9,2.2) -- (0.7,2.5) -- cycle; % the notching (left)
+\end{scope}
 \MacroTtwoTriangulationVerticesForDrawingQuiver
 \end{tikzpicture}
  }
@@ -4167,11 +4166,11 @@ node[pos=0.05, below]{$\ga$};
 (1.2,2.2);
 \draw[style = thick] (1.2,2.2) -- %node[pos =0.4,right=1pt] {$4$}  
 (0,0);
-\draw [fill=violet] (1.2,2.2) circle (.7ex); %puncture
-\draw [fill=green] (0,0) circle (.6ex);
-\draw [fill=green] (0,4) circle (.6ex);
-\draw [fill=green] (4,0) circle (.6ex);
-\draw [fill=green] (4,4) circle (.6ex);
+\draw [fill=violet] (1.2,2.2) circle (.3ex); %puncture
+\draw [fill=green] (0,0) circle (.3ex);
+\draw [fill=green] (0,4) circle (.3ex);
+\draw [fill=green] (4,0) circle (.3ex);
+\draw [fill=green] (4,4) circle (.3ex);
  }
  \newcommand  \TikzToneOnly[1]{
  \begin{tikzpicture} [scale=#1]
@@ -4185,7 +4184,7 @@ node[pos=0.05, below]{$\ga$};
 \draw[style = thick]  (0,0) rectangle (4,4);
 \draw [style = thick] (0,0) ..  controls(3.5,0.4) and (3.5,2) .. (4,4);
 \draw [style = thick] (0,0) ..  controls (3.7,1) and (3.8,3.9)   .. (0,4);
-\draw [style = very thick] (0,4) ..  controls (0.7,0.1) and (3.9,1.4)   .. (0,4) node[pos=0.87, right] {$\ell$}; %loop
+\draw [style = very thick] (0,4) ..  controls (0.7,0.1) and (3.9,1.4)   .. (0,4);% node[pos=0.87, right] {$\ell$}; %loop
 \draw[style = thick] (0,4) -- (1.2,2.2);
 \MacroTtwoTriangulationVerticesForDrawingQuiver
 \end{tikzpicture}
@@ -4476,12 +4475,27 @@ node[pos=0.05, below]{$\ga$};
  
 \newcommand\TikzTwoRectanglesFlipsAndThreeDigonsFlips[1]{
  \begin{tikzpicture}[scale=#1]
-\MacroTtwoTriangulationCoordinatesForDrawingQuiver
+%\MacroTtwoTriangulationCoordinatesForDrawingQuiver
+
+\begin{scope}[xshift=-3cm, very thick]
+\draw [<->, red] (0,2) -- (2,2);
+\draw[red] (1,3) node{\small $\mu_r$};
+\end{scope}
+\begin{scope}[xshift=-6.5cm,thick]
+\draw[style = thick]  (0,0) -- (0,4);
+\draw [style = thick] (0,0) ..  controls (3.7,1) and (3.8,3.9)   .. (0,4);
+\draw[style = thick,blue] (0,4) --  (1.2,2.2);
+\draw[style = thick,red] (1.2,2.2) -- (0,0) node[pos=0.5,right]{\small $r$};
+\draw [fill=violet] (1.2,2.2) circle (.3ex); %puncture
+\draw [fill=green] (0,0) circle (.3ex);
+\draw [fill=green] (0,4) circle (.3ex);
+\end{scope}
+
 \begin{scope}[thick]
 \draw[style = thick]  (0,0) -- (0,4); 
 \draw [style = thick] (0,0) ..  controls (3.7,1) and (3.8,3.9)   .. (0,4); % the middle arc 
-\draw[style = thick, blue] (0,4) .. controls (0.8,1) and (1,2) .. (1.2,2.2);  % the radius (tagged plain) arc
-\draw[style = thick, red] (0,4) -- (1.2,2.2);% node[pos=0.5, right=1pt] {$\iota(\ell)$};  
+\draw[style = thick, blue] (0,4) .. controls (0.8,1) and (1,2) .. (1.2,2.2) node[pos=0.5,below] {\small $b$};  % the radius (tagged plain) arc
+\draw[style = thick, red] (0,4) -- (1.2,2.2) node[pos=0.5, right=2pt] {\small $r'$};  
 \draw[red] (1,2.5) -- (1.1,2.8) -- (1.3,2.5) -- cycle; % the notching (right)
 \draw[red] (1,2.5) -- (0.9,2.2) -- (0.7,2.5) -- cycle; % the notching (left)
 \end{scope}
@@ -4492,15 +4506,15 @@ node[pos=0.05, below]{$\ga$};
 
 \begin{scope}[xshift=4cm, very thick]
 \draw [<->, blue] (0,2) -- (2,2);
+\draw [blue] (1,3) node{\small $\mu_b$};
 \end{scope}
 
 \begin{scope}[xshift=7cm, thick]
 \draw[style = thick]  (0,0) -- (0,4);
 \draw [style = thick] (0,0) ..  controls (3.7,1) and (3.8,3.9)   .. %node[pos =0.4,left=2pt] {$2$}  
 (0,4);
-\draw[style = thick,red] (0,4) -- %node[pos =0.3,right=1pt] {$3$}  
-(1.2,2.2);
-\draw[style = thick,blue] (1.2,2.2) -- %node[pos =0.4,right=1pt] {$4$}  
+\draw[style = thick,red] (0,4) -- (1.2,2.2);
+\draw[style = thick,blue] (1.2,2.2) -- node[pos =0.4,right=1pt] {\small $b'$}  
 (0,0);
 \draw [fill=violet] (1.2,2.2) circle (.3ex); %puncture
 \draw [fill=green] (0,0) circle (.3ex);
@@ -4509,18 +4523,6 @@ node[pos=0.05, below]{$\ga$};
 \draw[red] (1,2.5) -- (0.9,2.2) -- (0.7,2.5) -- cycle; % the top notching (left)
  \draw[blue] (1,1.9) -- (1.1,1.6) -- (1.3,1.9) -- cycle; % the bottom notching (right)
 \draw[blue] (1,1.9) -- (0.9,2.2) -- (0.7,1.9) -- cycle; % the bottom notching (left)
-\end{scope}
-\begin{scope}[xshift=-3cm, very thick]
-\draw [<->, red] (0,2) -- (2,2);
-\end{scope}
-\begin{scope}[xshift=-6.5cm,thick]
-\draw[style = thick]  (0,0) -- (0,4);
-\draw [style = thick] (0,0) ..  controls (3.7,1) and (3.8,3.9)   .. (0,4);
-\draw[style = thick,blue] (0,4) --  (1.2,2.2);
-\draw[style = thick,red] (1.2,2.2) -- (0,0);
-\draw [fill=violet] (1.2,2.2) circle (.3ex); %puncture
-\draw [fill=green] (0,0) circle (.3ex);
-\draw [fill=green] (0,4) circle (.3ex);
 \end{scope}
 
 
@@ -4531,12 +4533,13 @@ node[pos=0.05, below]{$\ga$};
 \begin{scope}[thick]
 \draw (-4,1) node{For example,};
 \draw[style = thick]  (0,0) rectangle \TikzNorthEast; 
-\draw[magenta] \TikzNorthWest -- \TikzSouthEast;
+\draw[magenta] \TikzNorthWest -- \TikzSouthEast node[pos=0.6,above] {\small $k$};
 \end{scope}
 \draw[magenta, <->, very thick] (4,1) -- (6,1);
+\draw[magenta] (5,1.7) node{\small $\mu_k$};
 \begin{scope}[thick,xshift = 7cm]
 \draw[style = thick]  (0,0) rectangle \TikzNorthEast; 
-\draw[magenta] (0,0) -- \TikzNorthEast;
+\draw[magenta] (0,0) -- \TikzNorthEast node[pos=0.4,above]{\small $k'$};
 \end{scope}
 \end{scope}
 
