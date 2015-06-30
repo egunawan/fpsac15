@@ -271,20 +271,17 @@ We extend Schiffler - Thomas' $T$-path definition and formula for unpunctured su
 
 %\begin{definition}[Complete $(T^o,\ga)$-path]\label{def:Tpath}
 \innerblock{Definition: quasi-arc}{
-If $\tau$ is an ordinary radius of $\Cn$ between a marked point $v$ on the boundary and the puncture $\puncture$,
-let an associated \emph{quasi-arc} $\tau'$ be a curve (not passing through $\puncture$) which agrees with $\tau$ outside of a radius-$\epsilon$ disk $D_\epsilon$ around $\puncture$, where $\epsilon$ is chosen small enough so that the intersection of $\tau$ with any other arc is outside of $D_\epsilon$.
-%\begin{enumerate}
-%\item $\tau'$ is between $v$ and a (non-marked) point $\puncture'$ in the vicinity of $\puncture$. (Note that another quasi-arc associated to $\tau$ may use a different point $\puncture''$.)
-%\item $\tau'$ agrees with the arc $\tau$ outside of a radius-$\epsilon$ disk $D_\epsilon$ around $\puncture$, where $\epsilon$ is chosen small enough so that the intersection of $\tau$ with any other arc is outside of $D_\epsilon$.
-%\end{enumerate}
-%If $\tau$ is a peripheral arc, we let the associated quasi-arc be $\tau$ itself.
-Otherwise, we let the associated quasi-arc be $\tau$ itself.
-%We label a quasi-arc with the label of the arc that it is associated to.
+If $\tau$ is an ordinary arc,
+let an associated \emph{quasi-arc} $\tau'$ be a curve (not passing through the puncture $\puncture$) which agrees with $\tau$ outside of a small radius-$\epsilon$ disk $D_\epsilon$ around $\puncture$.
+If $\tau$ is not adjacent to the puncture, let the associated quasi-arc be $\tau$ itself. 
+%If $\tau$ is an ordinary radius of $\Cn$ between a marked point $v$ on the boundary and the puncture $\puncture$,
+%let an associated \emph{quasi-arc} $\tau'$ be a curve (not passing through $\puncture$) which agrees with $\tau$ outside of a radius-$\epsilon$ disk $D_\epsilon$ around $\puncture$, where $\epsilon$ is chosen small enough so that the intersection of $\tau$ with any other arc is outside of $D_\epsilon$.
+%Otherwise, we let the associated quasi-arc be $\tau$ itself.
 }
 \innerblock{Definition: $T$-path}{
 Let $T^o$ be an ideal triangulation (of an unpunctured surface or a once-punctured disk) and an arc $\ga$ that crosses $T^o$.
 A \emph{complete $(T^o,\gamma)$-path} (or \emph{$T^o$-path} for short) $\om = (\om_1, \dots, \om_{2d+1})$
-is a concatenation of arcs and boundary edges such that:
+is a concatenation of quasi-arcs and boundary edges such that:
 \begin{itemize}
 \item [(T1)]
 Each even step $\om_{2k}$ ($k=1,\ldots,d$) is the $k$-th arc that $\gamma$ crosses.
@@ -335,13 +332,14 @@ The cluster variable $x_\gamma$ expressed
 in the variables corresponding to $T^o$ is 
 %\coloredbox{
 $$x_\gamma = \sum_\om x(\om)$$%}
-over all $(T^o,\gamma)$-paths $\om = (\om_1, \dots, \om_{2d+1})$ of $\gamma$,
+over all $(T^o,\gamma)$-paths $\om = (\om_1, \dots, \om_{2d+1})$,
 where 
 $$x(\om) := \left( {\prod_{i\text{ odd}} x_{\om_i}} \right) 
 \left({\prod_{i\text{ even}} x_{\om_i}}^{-1}\right).$$
 %\end{theorem}
 }}
 %\note[targetoffsetx=4cm, targetoffsety=3cm, width=16cm]{We expect to generalize this to other punctured surfaces.}
+\note[targetoffsetx=7cm, targetoffsety=-0.5cm, innersep=1cm,connection, width=4cm]{new}
 \note[width=10cm,targetoffsetx=7cm, targetoffsety=-3cm, innersep=1cm,angle=-20,connection]
 {We expect to generalize this to other punctured surfaces.}
 
