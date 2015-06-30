@@ -51,7 +51,7 @@
 %%%%%%%%%%%%%%%
 
 \title{Atomic Bases and $T$-path Formula for Cluster Algebras of Type $D$} \author{Emily Gunawan* and Gregg Musiker} 
-\institute{University of Minnesota, Minneapolis, USA}
+\institute{University of Minnesota, School of Mathematics, Minneapolis, USA}
 
 %\titlegraphic{\includegraphics{logo}}
 
@@ -114,7 +114,7 @@ such that $\gamma$ does not cross itself or the boundary, and $\gamma$ is not ho
 \item An \emph{ideal triangulation} is a maximum collection of distinct arcs that pairwise do not cross.
 \end{itemize}
 
-\OncePuncturedSquare{0.6}
+%\OncePuncturedSquare{0.6}
 \TikzTtwoIdealTriangulation{0.6}
 \TikzToneOnly{0.6}
 %\caption{Some ideal triangulations of a once-punctured disk}
@@ -152,14 +152,16 @@ marked points on the boundary:
 \item cluster variable $\longleftrightarrow$ tagged arc $\ga$
 \item exchanging clusters $\longleftrightarrow$ ``flipping diagonals"
 %  \text{cluster monomials}  && \longleftrightarrow  & &\text{multi-tagged dissections}
-\end{itemize}%{align*} 
+\end{itemize}
 }
-% align works
-%\end{theorem}
-%\begin{figure}
+}
+     \note[width=11cm, targetoffsetx=-.1\textwidth,targetoffsety=-9cm,innersep=-.2cm,angle=0,connection]{
+\begin{tikzfigure}
+\TikzTwoRectanglesFlipsAndThreeDigonsFlips{0.5}
+\end{tikzfigure}
 }
 \column{0.35}
-\block{Example: once-punctured $4$-gon}{
+\block{Example: once-punctured $4$-gon \OncePuncturedSquare{0.25}}{
 A tagged triangulation of a once-punctured square $\longleftrightarrow$ A quiver that is mutation equivalent to an orientation of a type $D_4$ Dynkin diagram.
 
 %%%%%%
@@ -168,8 +170,7 @@ A tagged triangulation of a once-punctured square $\longleftrightarrow$ A quiver
 %\begin{tikzfigure}
 \TikzTtwoTaggedNextToQuiver{0.7}
 \begin{tikzpicture}[scale =0.4]
-\begin{scope}[->,>=stealth',shorten >=1pt,auto,node distance=1cm,
-  ultra thick, red]
+\begin{scope}[->,>=stealth',shorten >=1pt,auto,node distance=1.5cm, ultra thick, red]
   \node (2) {};
   \node (1) [ left of=2] {};
   \node (r) [ above of=2, right of=2] {};
@@ -188,17 +189,27 @@ A tagged triangulation of a once-punctured square $\longleftrightarrow$ A quiver
 \end{scope}
 \end{tikzpicture}
  % \caption  {Finite $D_4$ Cluster algebra $\leftrightarrow$ finite $D_4$ Dynkin diagram}
-\begin{tikzpicture}
-  \draw (0:0) node{
+%\begin{tikzpicture}
+%  \draw (0:0) node{
+%  \begin{math}\bordermatrix{
+%\text{\small arcs} & \text{\small $1$} & \text{\small $2$} & \text{\small $r$} & \text{\small $r^{\bowtie}$}\cr
+% \text{\small $1$} & 0 & -1 & 0 & 0 \cr
+%\text{\small $2$} &1 & 0 & 1 & 1 \cr
+%\text{\small $r$} & 0 & -1 & 0 & 0 \cr
+%\text{\small $r^{\bowtie}$} & 0 & -1 & 0 & 0}\end{math}};
+%\end{tikzpicture} 
+}
+\note[width=9cm,targetoffsetx=1.5cm,targetoffsety=-1cm,innersep=.5cm,connection]{
+This example corresponds to \\
   \begin{math}\bordermatrix{
-\text{\small arcs} & \text{\small $1$} & \text{\small $2$} & \text{\small $r$} & \text{\small $r^{\bowtie}$}\cr
+%\text{\small arcs} 
+& \text{\small $1$} & \text{\small $2$} & \text{\small $r$} & \text{\small $r^{\bowtie}$}\cr
  \text{\small $1$} & 0 & -1 & 0 & 0 \cr
 \text{\small $2$} &1 & 0 & 1 & 1 \cr
 \text{\small $r$} & 0 & -1 & 0 & 0 \cr
-\text{\small $r^{\bowtie}$} & 0 & -1 & 0 & 0}\end{math}};
-\end{tikzpicture}
-  
+\text{\small $r^{\bowtie}$} & 0 & -1 & 0 & 0}\end{math}
 }
+
 \block{Example: once-punctured $3$-gon}{
 \begin{tikzfigure}
 [There are ${{2n}\choose n}-{{2n-2}\choose{n-1}}$ tagged triangulations of a once-punctured $n$-gon.]
@@ -306,8 +317,9 @@ $$x(\om) := \left( {\prod_{i\text{ odd}} x_{\om_i}} \right)
 \left({\prod_{i\text{ even}} x_{\om_i}}^{-1}\right).$$
 %\end{theorem}
 }}
-\note[targetoffsetx=4cm, targetoffsety=3cm, width=16cm]{We expect to generalize this to other punctured surfaces.}
-\note[targetoffsetx=4cm, targetoffsety=-7cm, width=15cm]{The $T$-paths are in natural bijection with the snake graph matchings of Musiker, Schiffler, and Williams.}
+%\note[targetoffsetx=4cm, targetoffsety=3cm, width=16cm]{We expect to generalize this to other punctured surfaces.}
+\note[width=10cm,targetoffsetx=7cm, targetoffsety=-3cm, innersep=1cm,angle=-20,connection]
+{We expect to generalize this to other punctured surfaces.}
 
 \column{0.45}
 \block{}{
@@ -385,7 +397,9 @@ Each path is homotopic to $\ga$ and satisfies (T1) but fails (T2) or (T3).
 %\label{fig:non_tpaths}
 %\end{figure}}
 }
-\note[targetoffsetx=6cm, targetoffsety=-2cm, width=5.5cm]{Steps are not drawn exactly along the arcs/boundary edges for \mbox{illustration} purposes.}
+\note[targetoffsetx=-22cm, targetoffsety=-7cm, width=5.5cm]
+{The $T$-paths are in natural bijection with Musiker, Schiffler, and Williams' snake graph matchings.}
+\note[targetoffsetx=7cm, targetoffsety=-7cm, width=5.5cm]{Steps are not drawn exactly along the arcs/boundary edges for \mbox{illustration} purposes.}
 \end{columns}
 
 
@@ -514,8 +528,8 @@ Type $\tilD_{n-1}$ cluster algebras ($(n-3)$-gons with $2$ punctures), e.g. type
 \note[targetoffsetx=22cm,targetoffsety=-1cm, width=22cm]{
 %We would like to thank Pasha Pylyavskyy, Vic Reiner, and Peter Webb for looking over an early version of this paper, Hugh Thomas for helpful discussions, and the referees for many useful comments. 
 The authors were supported by NSF Grants DMS-1067183 and DMS-1148634,
-and would like to thank P. Pylyavskyy, V. Reiner, H. Thomas, and P. Webb.
-Paper to appear in SIGMA.}
+and would like to thank P. Pylyavskyy, V. Reiner, H. Thomas, and P. Webb.\\
+Preprint arXiv:1409.3610 (2014) to appear in SIGMA.}
 
 \block{References}{
 %\bibliographystyle{authordate1}
