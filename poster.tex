@@ -94,7 +94,7 @@ b_{ij} + b_{ik}b_{kj} &\text{if $b_{ik}>0$ and $b_{kj}>0$}\\
 b_{ij} - b_{ik}b_{kj} &\text{if $b_{ik}<0$ and $b_{kj}<0$}\\
 b_{ij} &\text{otherwise}
 \end{cases}\]
-\item Apply all possible sequences of mutations to produce all cluster variables (usually inifinite).
+\item Apply all possible sequences of mutations to produce all cluster variables (usually infinitely many).
 \end{enumerate}
 
 %\item Construction of cluster variables:
@@ -114,7 +114,7 @@ b_{ij} &\text{otherwise}
 
     \begin{itemize}
     \item \textbf{Laurent Phenomenon:} each cluster variable can be expressed as a Laurent polynomial in $\{ x_1, \dots, x_n\}$.
-    \item \textbf{Positivity:} this Laurent polynomial has positive coefficients (2014, [Lee and Schiffler], [Gross, Hacking, Keel, and Kontsevich], and others).
+    \item \textbf{Positivity:} this Laurent polynomial has positive coefficients (2014, [Lee and Schiffler], [Gross, Hacking, Keel, and Kontsevich], and special cases by others).
     \end{itemize}
 }
 
@@ -123,7 +123,7 @@ b_{ij} &\text{otherwise}
 \begin{multicols*}{2}
 \innerblock{Definition: ordinary arcs}{
 \begin{itemize}
-\item An \emph{ordinary ar}c $\gamma$ is a non-contractible curve between marked points
+\item An \emph{ordinary arc} $\gamma$ is a non-contractible curve between marked points
 such that $\gamma$ does not cross itself or the boundary, and $\gamma$ is not homotopic to a boundary edge.
 %\begin{itemize}
 %\item $\gamma$ does not cross itself or the boundary of $S$
@@ -182,10 +182,10 @@ marked points on the boundary:
 \end{align*}
 }
 }
-\note[width=11cm, targetoffsetx=0.09\textwidth,targetoffsety=-8.5cm,innersep=-.2cm,angle=0,connection]{
-\begin{tikzfigure}
+\note[width=10cm, targetoffsetx=0.09\textwidth,targetoffsety=-8.5cm,innersep=.2cm,angle=0,connection]{
+%\begin{tikzfigure}
 \TikzTwoRectanglesFlipsAndThreeDigonsFlips{0.5}
-\end{tikzfigure}
+%\end{tikzfigure}
 }
 \column{0.35}
 \block{Example: once-punctured $4$-gon%\OncePuncturedSquare{0.25}
@@ -316,7 +316,8 @@ following $\om_{2k+1}$, following $\om_{2k+2}$ until $p_{k+1}$.
 %the point $p_d$ following $\om_{2d}$ and $\om_{2d+1}$ until the point $p_{d+1}=t$.
 %\end{enumerate}
 \item[(T3)] 
-The step $\om_{2k+1}$ starts and finishes in the interior of $\blacktri{k}$ or at a boundary marked point. 
+The step $\om_{2k+1}$ traverses a side of the triangle $\blacktri{k}$, and
+starts and finishes in the interior of $\blacktri{k}$ or at a boundary marked point. 
 %This means that, if $\om_{2k+1}$ goes along a quasi-arc $\tau'$ associated to a radius, $\tau'$ must be chosen so that its endpoint $\puncture'$ near the puncture is located in the interior of $\blacktri{k}$.
 \end{itemize}
 }%\end{definition}
@@ -489,7 +490,7 @@ inspired by work on types $A$ and $\widetilde{A}$ by {[Dupont and Thomas, 2011]}
 
 \end{columns}
 
-%\begin{columns} \column{0.5} 
+\begin{columns} \column{0.8} 
 
 \block{Atomic bases for other surfaces}
 {\begin{multicols*}{2}
@@ -498,7 +499,8 @@ A candidate for atomic bases:
 the \emph{``bracelets collection"} consisting of all cluster monomials %plus
 $+$ a class of elements.
 A \emph{bracelet} is a 
-closed loop in the interior of the surface which avoids marked points.
+closed loop in the interior of the surface which 
+wraps around itself once or multiple times and avoids marked points.
 % is the atomic basis for a cluster algebra from a surface. %arising from a surface.
 %(True for disks with $\leq 1$ puncture and annuli, types $A$, $D$, and $\widetilde{A}$).
 % (type $\widetilde{A}$), and once-punctured disks (type $D$)).)
@@ -513,8 +515,8 @@ unpunctured surfaces (Musiker, Schiffler, and Williams, 2011).
 \end{enumerate}
 %}
 
-\innerblock{Current work}{
-Type $\tilD_{n-1}$ cluster algebras ($(n-3)$-gons with $2$ punctures), \textit{e.g.} type $\tilD_{6}$ cluster algebra comes from a square with $2$ punctures.
+\innerblock{Further directions}{
+Type $\tilD_{n-1}$ cluster algebras ($(n-3)$-gons with $2$ punctures), \textit{e.g.} type $\tilD_{6}$ cluster algebra comes from a twice-punctured disk with $4$ marked points on the boundary.
 
 \TikzAffineDSixTaggedNextToQuiver{0.7}
 \begin{tikzpicture}[scale=0.4]
@@ -562,7 +564,7 @@ Type $\tilD_{n-1}$ cluster algebras ($(n-3)$-gons with $2$ punctures), \textit{e
 %}
 %\column{0.5}
 %\block{Acknowledgements.~} {
-\note[targetoffsetx=22cm,targetoffsety=-2.5cm, width=22cm,innersep=.5cm]{
+\note[targetoffsetx=35cm,targetoffsety=2.5cm, width=19cm,innersep=.5cm]{
 %We would like to thank Pasha Pylyavskyy, Vic Reiner, and Peter Webb for looking over an early version of this paper, Hugh Thomas for helpful discussions, and the referees for many useful comments. 
 \begin{enumerate}[-]
 \item The authors were supported by NSF Grants DMS-1067183 and DMS-1148634,
@@ -571,7 +573,7 @@ and would like to thank P. Pylyavskyy, V. Reiner, H. Thomas, and P. Webb.
 \item Email: egunawan@umn.edu 
 \item Home page: umn.edu/home/egunawan
 \end{enumerate}}
-
+\end{columns}
 
 %\block{References}{
 %%\bibliographystyle{authordate1}
