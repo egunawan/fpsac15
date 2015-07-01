@@ -1,5 +1,18 @@
 \documentclass[a0paper, portrait, 17pt]{tikzposter}
 %12pt, 14pt, 17pt, 20pt, or 25pt;
+%[25pt, a0paper, portrait, margin=0mm, innermargin=15mm,
+ %    blockverticalspace=15mm, colspace=15mm, subcolspace=8mm]
+
+%for IMA
+%You can bring your poster (40 inches (101 cm) high by 30 inches (76 cm) wide)
+
+%Poster Dimension: You can bring your poster with you to fit on the IMA poster board ? 40 inches (101 cm) high by 30 inches (76 cm) wide. Poster size can either be 40×30 (landscape) or 30×40 (portrait). IMA will provide the thumbtacks.
+%The poster board can accommodate 8 or 9 A4 pages.
+
+%A1 format measures 841 x 594 mm or 33,11 x 23,39 inches. Its length corresponds to the width of the A0, and its width corresponds to the length of the A2. Its printing surface is 791 x 554 millimeters when the conventional printing margins are applied.
+
+%\documentclass[a1paper,portrait, 17pt]{tikzposter}
+%\geometry{paperwidth=76cm,paperheight=101cm}
 
 \usepackage{amsmath}
 %\usepackage{graphicx}
@@ -342,7 +355,7 @@ $$x(\om) := \left( {\prod_{i\text{ odd}} x_{\om_i}} \right)
 %\end{theorem}
 }}
 %\note[targetoffsetx=4cm, targetoffsety=3cm, width=16cm]{We expect to generalize this to other punctured surfaces.}
-\note[targetoffsetx=7cm, targetoffsety=-0.5cm, innersep=1cm,connection, width=4cm]{new}
+\note[targetoffsetx=18cm, targetoffsety=-0.5cm, innersep=1cm,connection, width=4cm]{new}
 \note[width=10cm,targetoffsetx=7cm, targetoffsety=-3cm, innersep=1cm,angle=-20,connection]
 {We expect to generalize this to other punctured surfaces.}
 
@@ -494,7 +507,7 @@ inspired by work on types $A$ and $\widetilde{A}$ by {[Dupont and Thomas, 2011]}
 
 \block{Atomic bases for other surfaces}
 {\begin{multicols*}{2}
-\innerblock{Conjecture (Fomin, Shapiro, and Thurston, 2008)}{
+\innerblock{Conjecture (Fomin, Shapiro, and Thurston, 2008, unpublished, based on Fock and Goncharov, 2006)}{
 A candidate for atomic bases:
 the \emph{``bracelets collection"} consisting of all cluster monomials %plus
 $+$ a class of elements.
@@ -548,23 +561,13 @@ Type $\tilD_{n-1}$ cluster algebras ($(n-3)$-gons with $2$ punctures), \textit{e
 }
 \end{multicols*}
 }
+\note[targetoffsetx=-19cm, targetoffsety=0.1cm, innersep=0cm, width=4cm,angle=-10,connection]
+{
+\TikzBraceletExample{0.85}
+}
 %\item A version of the $T$-path formula for tagged triangulations.
 
-%% Text and figure Inside the Block
-%\block{Text and figure Block}{
-%\begin{minipage}[t]{0.7\linewidth}
-%%\lipsum[1]
-%\itemize{\item one \item two}
-%\end{minipage}%
-%\begin{adjustbox}{valign=t}
-%\begin{minipage}[t]{0.3\linewidth}
-%\TikzToneOnly{0.6}
-%\end{minipage}
-%\end{adjustbox}
-%}
-%\column{0.5}
-%\block{Acknowledgements.~} {
-\note[targetoffsetx=35cm,targetoffsety=2.5cm, width=19cm,innersep=.5cm]{
+\note[targetoffsetx=33.5cm,targetoffsety=2.5cm, width=17.5cm,innersep=1cm]{
 %We would like to thank Pasha Pylyavskyy, Vic Reiner, and Peter Webb for looking over an early version of this paper, Hugh Thomas for helpful discussions, and the referees for many useful comments. 
 \begin{enumerate}[-]
 \item The authors were supported by NSF Grants DMS-1067183 and DMS-1148634,

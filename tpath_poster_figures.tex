@@ -25,8 +25,10 @@
 \tikzstyle{PathArrowAtPosStyleOne}=[decoration={ markings, mark=at position 0.1 with {\arrow[line width=\PathArrowLineWidth]{\PathArrowStyle};}}, postaction={decorate}]
 
 \tikzstyle{PathArrowAtPosStyleTwo}=[decoration={ markings, mark=at position 0.2 with {\arrow[line width=\PathArrowLineWidth]{\PathArrowStyle};}}, postaction={decorate}]
+\tikzstyle{PathArrowAtPosStyleTwoSmall}=[decoration={ markings, mark=at position 0.2 with {\arrow[line width=0.7*\PathArrowLineWidth]{\PathArrowStyle};}}, postaction={decorate}]
 
 \tikzstyle{PathArrowAtPosStyleThree}=[decoration={ markings, mark=at position 0.3 with {\arrow[line width=\PathArrowLineWidth]{\PathArrowStyle};}}, postaction={decorate}]
+\tikzstyle{PathArrowAtPosStyleThreeSmall}=[decoration={ markings, mark=at position 0.3 with {\arrow[line width=0.7*\PathArrowLineWidth]{\PathArrowStyle};}}, postaction={decorate}]
 
 \tikzstyle{PathArrowAtPosStyleFour}=[decoration={ markings, mark=at position 0.4 with {\arrow[line width=\PathArrowLineWidth]{\PathArrowStyle};}}, postaction={decorate}]
 \tikzstyle{PathArrowAtPosStyleFourSmall}=[decoration={ markings, mark=at position 0.4 with {\arrow[line width=0.7*\PathArrowLineWidth]{\PathArrowStyle};}}, postaction={decorate}]
@@ -4546,3 +4548,27 @@ node[pos=0.05, below]{$\ga$};
 
 \end{tikzpicture}
 }
+
+\newcommand\TikzBraceletExample[1]{
+\begin{tikzpicture}[scale=#1]
+\newcommand\localradius{1.9}
+\newcommand\localorigin{(0,2)}
+\draw \localorigin circle (\localradius);
+\draw[violet, fill] (0,1.5) circle (0.2ex);
+\draw[violet, fill] (0,2.5) circle (0.2ex);
+\begin{scope}[yshift=2cm]
+\foreach \myangle in {30,-60,120,-150}
+{\draw [violet,fill](\myangle:\localradius) circle (0.2ex);}
+\end{scope}
+\newcommand\localshift{0.25}
+\draw[red, thick, rounded corners=18pt,
+PathArrowAtPosStyleTwoSmall,
+PathArrowAtPosStyleThreeSmall,
+PathArrowAtPosStyleFourSmall] (0,0.5) -- (1.2,2.3) -- (0,3.5) --  (-1.2,2.3)  -- 
+(0,0.5-\localshift)  -- (1+\localshift,1)  -- (1.2+\localshift,3) -- (0,3.5+\localshift) --  (-1.2-\localshift,3)  -- (-1-\localshift,1)  --
+(0,0.5-2*\localshift)  -- (1+2*\localshift,1) -- (1.2+2*\localshift,3) -- (0,3.5+2*\localshift) --  (-1.2-2*\localshift,3)  -- (-1-2*\localshift,1)  --
+cycle ;
+\end{tikzpicture}
+}
+
+
