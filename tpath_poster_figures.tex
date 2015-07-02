@@ -835,9 +835,9 @@ node[pos=0.2, below] {$\ga$};
 	 
 	 \draw[rounded corners = 15pt] (0,0) -- 
 	 (-2.5,4) %-- (-3,4) 
-	 --  (0,6) node[pos=0.8,right,black]{\localfontsize $2$}  -- (4,4);
+	 --  (0,6) node[pos=0.8,black]{\localfontsize $2$}  -- (4,4);
 	 
-	 \draw[thick] (0,0) -- (0,2.9) node[pos=0.8, right=2pt,black]{\localfontsize $r$};
+	 \draw[thick] (0,0) -- (0,2.9) node[pos=0.8, right,black]{\localfontsize $r$};
 	
 	\draw[style = thick, rounded corners = 20pt]
 	(0,0) .. controls (-1.5,2) and (-2,3) .. (0,5) .. 
@@ -911,7 +911,7 @@ rounded corners = 5pt,
 	\end{tikzpicture}
 }
 
-\newcommand\TikzTpathSixBad[1]{
+\newcommand\TikzTpathSixBad[2]{
 	\begin{tikzpicture} [scale = {#1}]
 	\begin{scope}[rotate=45]
 	\MacroTtwoTpathChubby
@@ -931,7 +931,8 @@ rounded corners = 5pt,
 	\node at (-3,-0.5) {\TikzPosterTpathSixNineFontSize $b_2$};
 	\node at (0.5,3) {\TikzPosterTpathSixNineFontSize $b_3$};
 	%\node[white] at (-6.2,3) {$b_1$};
-	\node[] at (-8,3){}; \node[] at (2,3){};
+	%\node[] at (-8,3){}; \node[] at (2,3){};
+\node at \TikzPosterTpathSixNineCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 	\end{tikzpicture}
 }
 
@@ -1643,9 +1644,9 @@ rounded corners = 5pt,
 \draw[postaction={decorate}]  (vL) -- (t) node[pos=0.5,right] {\tempfontsize $b_3$};
 \draw[postaction={decorate}]  (t) --(s) node[pos=0.5,above] {\tempfontsize $b_4$};
 \draw [postaction={decorate}] (t) ..  controls(3.5,0.4) and (3.5,2) .. (vR) node[left, pos=0.3] {\tempfontsize $1$};
-\draw [postaction={decorate}] (t) ..  controls (3.7,1) and (3.8,3.9)   .. (vL) node[right, pos=0.5] {\tempfontsize $2$};%;
+\draw [postaction={decorate}] (t) ..  controls (3.7,1) and (3.8,3.9)   .. (vL) node[ pos=0.5] {\tempfontsize $2$};%;
 \draw [NooseArrowAtPosStyleSix] (vL) ..  controls (3.9,1.4)  and (0.7,0.1)  .. (vL) node[pos=0.7, right,above] {\tempfontsize $\ell$}; %loop
-\draw[postaction={decorate}] (vL) -- (1.2,2.2) node[left, pos=0.7] {\tempfontsize $r$};
+\draw[postaction={decorate}] (vL) -- (1.2,2.2) node[ pos=0.7] {\tempfontsize $r$};
 \end{scope}
  } 
   \newcommand\TikzTtwoIdealTriangulationWithNumberLabels[1]{ % USED
@@ -3787,7 +3788,7 @@ node[pos=0.05, below]{$\ga$};
 \end{scope}
 }
 
-\newcommand\TikzNooseTpathOneBad[1]{
+\newcommand\TikzNooseTpathOneBad[2]{
 \begin{tikzpicture}[scale={#1}]
 \MacroNooseTriangulation{gray}
 \MacroNooseTpathDrawLabels
@@ -3805,6 +3806,7 @@ node[pos=0.05, below]{$\ga$};
 
 \node at (1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_1$}; 
 \node at (1.8*\Tikzn,0) {}; \node at (-1.8*\Tikzn,0) {}; 
+\node at \TikzPosterNooseTpathOneFourCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 \end{tikzpicture}
 }
 
@@ -3938,7 +3940,7 @@ node[pos=0.05, below]{$\ga$};
 \end{scope}
 }
 
-\newcommand\TikzNotNooseTpathThreeBad[1]{
+\newcommand\TikzNotNooseTpathThreeBad[2]{
 \begin{tikzpicture}[scale={#1}]
 \MacroNotNooseTriangulation{gray}
 
@@ -3961,7 +3963,6 @@ node[pos=0.05, below]{$\ga$};
 -- (-\Tikzn,\Tikzn);
 
 \draw [TPathStyle, PathArrowAtPosStyleEnd] (-\Tikzn,\Tikzn) -- (-\Tikzn,-\Tikzn); \node[black] at (-1.3*\Tikzn,0) {\TikzPosterTpathSixNineFontSize $b_3$};
-
 \end{scope}
 %
 %\draw [TPathStyle, PathArrowAtPosStyleFourSmall] (\Tikzn,-\Tikzn) -- (\Tikzn,\Tikzn); 
@@ -3974,6 +3975,7 @@ node[pos=0.05, below]{$\ga$};
 %\draw [TPathStyle,rounded corners=20pt,PathArrowAtPosStyleSevenSmall] (-0.9*\Tikzn,-0.9*\Tikzn) -- (P) -- (\Tikzn,-\Tikzn) ;
 %\MacroDrawBlueDot{0}{-0.3*\Tikzn}
 \node at (-2.3*\Tikzn,0) {}; \node at (2.3*\Tikzn,0) {}; 
+\node at \TikzPosterNotNooseTpathOneThreeCaptionLocation {\TikzPosterTpathSixNineCaptionSize #2};
 \end{tikzpicture}
 }
 

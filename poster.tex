@@ -154,8 +154,8 @@ where
 \begin{multicols*}{2}
 \innerblock{Definition: ordinary arcs}{
 \begin{itemize}
-\item An \emph{ordinary arc} $\gamma$ is a non-contractible curve between marked points
-such that $\gamma$ does not cross itself or the boundary, and $\gamma$ is not homotopic to a boundary edge.
+\item An \emph{ordinary arc} $\ga$ is a non-contractible curve between marked points
+such that $\ga$ does not cross itself or the boundary, and $\ga$ is not homotopic to a boundary edge.
 %\begin{itemize}
 %\item $\gamma$ does not cross itself or the boundary of $S$
 %\item $\gamma$ is not homotopic to a boundary edge.
@@ -285,7 +285,7 @@ This example corresponds to \\
 {
 %\coloredbox{
 We extend Schiffler and Thomas' $T$-path definition and formula for unpunctured surfaces (2009). 
-Let $T^o$ be an ideal triangulation (of an unpunctured surface or a $1$-punctured disk) and $\ga$ an arc that crosses $T^o$.
+Let $T^o$ be an ideal triangulation (of an unpunctured surface or a once-punctured disk) and $\ga$ an ordinary arc that crosses $T^o$.
 Let $\blacktri{k}$ denote the $k$-th ideal triangle crossed by $\ga$.
 %We expect to generalize this to other punctured surfaces.
 %}
@@ -384,7 +384,7 @@ All \emph{backtracks} $(\underline{2,2})$ and $(\underline{\ell,\ell})$ have bee
 \end{tikzfigure}
 
 \begin{tikzfigure}
-[The four $(T^o,\ga)$-paths of the ideal triangulation $T^o$ and $\ga$ of the first figure.]
+[The four $(T^o,\ga)$-paths of the ideal triangulation $T^o$ and the arc $\ga$ of the first figure.]
 \label{fig:TikzNooseGammaIdealTriangulation}
 
 \TikzNooseGammaIdealTriangulation{1.5*\TikzNooseTpathsSize}
@@ -423,15 +423,15 @@ Either (T2) or (T3) is not satisfied.
 %\mbox{
 %\subfigure[A path with the same labels {\tiny\TpathCompleteSixDollar} as Figure \ref{fig:path_six}
 % but fails (T2) because ${[p_4,p_5]_{\om}}$ is not homotopic to $\ga_4$.]{
-\TikzTpathSixBad{0.4}
+\TikzTpathSixBad{0.4}{\TpathCompleteSixDollar}
 %\label{fig:path_six_bad}
 %}\quad
 %\subfigure[A path with the same labels {\tiny$(b_1,1,\underline{2,2},\overline{3,3},\tau)$} as Figure \ref{fig:TikzNooseTpathOne} but fails (T3) because $\om_5=3$ starts outside $\blacktri{2}$.]{
-\TikzNooseTpathOneBad{\TikzNooseTpathsSize}
+\TikzNooseTpathOneBad{\TikzNooseTpathsSize}{$(b_1,1,\underline{2,2},\overline{3,3},\tau)$}
 %\label{fig:TikzNooseTpathOneBad}
 %}\quad
 %\subfigure[A path with the same labels {\tiny$(0,\overline{1,1},2,\underline{3,3},b_3)$} as Figure \ref{fig:TikzNotNooseTpathThree} but fails (T3) because $\om_{1}=0$ starts outside $\blacktri{0}$ and $\om_3=2$ finishes outside $\blacktri{1}$.]{
-\TikzNotNooseTpathThreeBad{\TikzNooseTpathsSize}
+\TikzNotNooseTpathThreeBad{\TikzNooseTpathsSize}{$(0,\overline{1,1},2,\underline{3,3},b_3)$}
 \end{tikzfigure}
 %\label{fig:TikzNotNooseTpathThreeBad}
 %\caption{Examples of \emph{non}-$(T^o,\ga)$-paths for the situations in Figures \ref{fig:T2_triangulated_polygon_original}, \ref{fig:TikzNooseGammaIdealTriangulation}, and \ref{fig:TikzNotNooseGammaIdealTriangulation}.
@@ -439,8 +439,10 @@ Either (T2) or (T3) is not satisfied.
 %\label{fig:non_tpaths}
 %\end{figure}}
 }
-\note[targetoffsetx=-23cm, targetoffsety=-5cm, width=6cm]
-{The \mbox{$T$-paths} are in \mbox{natural} \mbox{bijection} with Musiker, \mbox{Schiffler}, and Williams' snake graph matchings.}
+\note[targetoffsetx=-23.5cm, targetoffsety=-5cm, width=7.5cm]
+{The \mbox{$T$-paths} are in \mbox{natural} \mbox{bijection} with Musiker, \mbox{Schiffler}, and Williams' snake graph \mbox{matchings.}\\
+
+Also, a \emph{(complete)} \mbox{$T$-path} is uniquely determined by its \mbox{sequence} of labels.}
 %\note[targetoffsetx=7cm, targetoffsety=-7cm, width=5.5cm]{Steps are not drawn exactly along the arcs/boundary edges for \mbox{illustration} purposes.}
 \end{columns}
 
@@ -505,7 +507,7 @@ For a cluster algebra of type $A$, $D$, or $E$, the basis of cluster monomials i
 %\item Cerulli Irelli (2011) gives a representation theory proof which works for all finite type cluster algebras.
 \item %\cite[Cerulli Irelli, 2011]{Cer11} and 
 Representation theory proof by {[Cerulli Irelli, 2011]} and
-{[Cerulli Irelli, Keller, Labardini-Fragoso, and Plamondon, 2012]}
+{[Cerulli Irelli, Keller, Labardini-Fragoso, and Plamondon, 2012]}.
 \item We give a combinatorial proof (using the $T$-path formula) for type $D$,
 inspired by work on types $A$ and $\widetilde{A}$ by {[Dupont and Thomas, 2011]}.
 
@@ -515,7 +517,7 @@ inspired by work on types $A$ and $\widetilde{A}$ by {[Dupont and Thomas, 2011]}
 %}
 }
 \note[width=12cm, angle=-15,connection, 
- targetoffsety=3.5cm,targetoffsetx=8cm]{%If $\mathcal{A}$ comes from a surface, 
+ targetoffsety=3.5cm,targetoffsetx=9cm]{%If $\mathcal{A}$ comes from a surface, 
  A cluster monomial corresponds to a multi-tagged dissection (\textit{i.e.} a partial tagged triangulation allowing multiple copies of tagged arcs).}
 
 
