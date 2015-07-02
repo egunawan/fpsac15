@@ -49,6 +49,22 @@ a0paper, portrait, 20pt]{tikzposter}
 %\usecolorstyle[colorPalette=BrownBlueOrange]{Germany}
 %\usetitlestyle{Wave}
 
+\renewenvironment{tikzfigure}[1][]{
+  \def \rememberparameter{#1}
+  \vspace{1pt}
+  \refstepcounter{figurecounter}
+  \begin{center}
+  \tabular{c}
+  }{
+    \ifx\rememberparameter\@empty
+    \else %nothing
+    \\[1pt]
+    {\small Fig.~\thefigurecounter: \rememberparameter }
+    \fi
+  \endtabular
+  \end{center}
+}
+
 
 \input{mycommands}  %%%%
 %%%%%%% TIKZ %%
@@ -113,9 +129,10 @@ where
 \, \text{ and }\, \mu_k(B)_{ij}=
  \begin{cases}
  - b_{ij}&\text{if $k=i$ or $k=j$} \\
-b_{ij} + b_{ik}b_{kj} &\text{if $b_{ik}>0$ and $b_{kj}>0$}\\
-b_{ij} - b_{ik}b_{kj} &\text{if $b_{ik}<0$ and $b_{kj}<0$}\\
-b_{ij} &\text{otherwise}
+ b_{ij} + \frac{1}{2} \left(b_{ik}|b_{kj}|+b_{ik}|b_{kj}|\right) &\text{otherwise}
+%b_{ij} + b_{ik}b_{kj} &\text{if $b_{ik}>0$ and $b_{kj}>0$}\\
+%b_{ij} - b_{ik}b_{kj} &\text{if $b_{ik}<0$ and $b_{kj}<0$}\\
+%b_{ij} &\text{otherwise}
 \end{cases}\]
 \item Apply all possible sequences of mutations to produce all cluster variables (usually infinitely many).
 \end{enumerate}
@@ -374,11 +391,11 @@ All \emph{backtracks} $(\underline{2,2})$ and $(\underline{\ell,\ell})$ have bee
 \TikzTpathSeven{\TikzFourTpathsSize}{\TpathCompleteSevenDollar}
 \TikzTpathEight{\TikzFourTpathsSize}{\TpathCompleteEightDollar}
 \TikzTpathNine{\TikzFourTpathsSize}{\TpathCompleteNineDollar}
-%\end{tikzfigure}
+\end{tikzfigure}
 
-%\begin{tikzfigure}
-%[The four $(T^o,\ga)$-paths of the ideal triangulation $T^o$ and the $\ell$-loop $\ga$ of the first figure.]
-%\label{fig:TikzNooseGammaIdealTriangulation}
+\begin{tikzfigure}
+[The four $(T^o,\ga)$-paths of the ideal triangulation $T^o$ and $\ga$ of the first figure.]
+\label{fig:TikzNooseGammaIdealTriangulation}
 
 \TikzNooseGammaIdealTriangulation{1.5*\TikzNooseTpathsSize}
 %\label{fig:TikzNooseGammaIdealTriangulation}
@@ -536,7 +553,7 @@ wraps around itself once or multiple times and avoids marked points.
 \begin{enumerate}[-]
 \item True for annuli, type $\widetilde{A}$ (Dupont and Thomas, 2011).
 \item The bracelets collection forms a basis for 
-unpunctured surfaces (Musiker, Schiffler, and Williams, 2011).
+unpunctured surfaces \mbox{(Musiker, Schiffler, and Williams, 2011)}.
 \end{enumerate}
 %}
 
