@@ -267,7 +267,8 @@ This example corresponds to \\
 {
 %\coloredbox{
 We extend Schiffler - Thomas' $T$-path definition and formula for unpunctured surfaces (2009). 
-Let $T^o$ be an ideal triangulation (of an unpunctured surface or a once-punctured disk) and an arc $\ga$ that crosses $T^o$.
+Let $T^o$ be an ideal triangulation (of an unpunctured surface or a once-punctured disk) and let $\ga$ be an arc that crosses $T^o$.
+Let $\blacktri{k}$ denote the $k$-th ideal triangle crossed by $\ga$.
 %We expect to generalize this to other punctured surfaces.
 %}
 
@@ -282,7 +283,8 @@ If $\tau$ is not adjacent to the puncture, let the associated quasi-arc be $\tau
 }
 \innerblock{Definition: $T$-path}{
 %Let $T^o$ be an ideal triangulation (of an unpunctured surface or a once-punctured disk) and an arc $\ga$ that crosses $T^o$.
-A \emph{complete $(T^o,\gamma)$-path} (or \emph{$T^o$-path} for short) $\om = (\om_1, \dots, \om_{2d+1})$
+A \emph{(complete) $(T^o,\ga)$-path} %(or \emph{$(T^o,\ga)$-path} for short) 
+$\om = (\om_1, \dots, \om_{2d+1})$
 is a concatenation of quasi-arcs and boundary edges such that:
 \begin{itemize}
 \item [(T1)]
@@ -354,14 +356,14 @@ $$x(\om) := \left( {\prod_{i\text{ odd}} x_{\om_i}} \right)
 %\mbox{
 %\subfigure[An arc $\ga$ of $\Cnn{4}$ which crosses $T^o$ $5$ times.]{
 \begin{tikzfigure}
-[Four of nine $(T^o,\ga)$-paths. %(of $T^o$ and $\ga$ from Figure \ref{fig:T2_triangulated_polygon_original}) which contain a (counterclockwise) non-backtrack cycle $(\rrNon)$.
-All backtracks $(\underline{2,2})$ and $(\underline{\ell,\ell})$ have been omitted.]
+[Four of the nine $(T^o,\ga)$-paths from the first figure. %(of $T^o$ and $\ga$ from Figure \ref{fig:T2_triangulated_polygon_original}) which contain a (counterclockwise) non-backtrack cycle $(\rrNon)$.
+All \emph{backtracks} $(\underline{2,2})$ and $(\underline{\ell,\ell})$ have been omitted.]
 \label{fig:T2_triangulated_polygon_original}
 \TikzTtwoIdealTriangulationWithNumberLabels{1.8*\TikzFourTpathsSize}
-\TikzTpathSix{\TikzFourTpathsSize}{ \TpathCompleteSixDollar}
-\TikzTpathSeven{\TikzFourTpathsSize}{ \TpathCompleteSevenDollar}
-\TikzTpathEight{\TikzFourTpathsSize}{ \TpathCompleteEightDollar}
-\TikzTpathNine{\TikzFourTpathsSize}{ \TpathCompleteNineDollar}
+\TikzTpathSix{\TikzFourTpathsSize}{\TpathCompleteSixDollar}
+\TikzTpathSeven{\TikzFourTpathsSize}{\TpathCompleteSevenDollar}
+\TikzTpathEight{\TikzFourTpathsSize}{\TpathCompleteEightDollar}
+\TikzTpathNine{\TikzFourTpathsSize}{\TpathCompleteNineDollar}
 \end{tikzfigure}
 
 \begin{tikzfigure}
@@ -381,7 +383,7 @@ All backtracks $(\underline{2,2})$ and $(\underline{\ell,\ell})$ have been omitt
 \end{tikzfigure}
 
 \begin{tikzfigure}
-[Three of the five $(T^o,\ga)$-paths of the ideal triangulation $T^o$ and the arc $\ga$ of the first figure]
+[Three of the five $(T^o,\ga)$-paths of the ideal triangulation $T^o$ and the arc $\ga$ of the first figure.]
 \label{fig:TikzNotNooseGammaIdealTriangulation}
 %\mbox{
 %\subfigure[An arc $\ga$ of $\Cnn{4}$ which crosses $T^o$ $3$ times.]{
@@ -423,7 +425,7 @@ Each path is homotopic to $\ga$ and satisfies (T1) but fails (T2) or (T3).
 %\end{figure}}
 }
 \note[targetoffsetx=-22cm, targetoffsety=-7cm, width=5.5cm]
-{The $T$-paths are in natural bijection with Musiker, Schiffler, and Williams' snake graph matchings.}
+{The $T$-paths are in \mbox{natural} bijection with Musiker, Schiffler, and Williams' snake graph matchings.}
 %\note[targetoffsetx=7cm, targetoffsety=-7cm, width=5.5cm]{Steps are not drawn exactly along the arcs/boundary edges for \mbox{illustration} purposes.}
 \end{columns}
 
@@ -439,8 +441,8 @@ Each path is homotopic to $\ga$ and satisfies (T1) but fails (T2) or (T3).
 %\innerblock{Definition: atomic bases and cluster monomials}{
 Let $\mathcal{A}$ be a (coefficient-free) cluster algebra.
 \begin{itemize}
- \item The \emph{positive cone} of $\mathcal{A}$ is
- $\{$positive elements$\}$ = 
+ \item Let the \emph{positive cone} of $\mathcal{A}$ be
+ $\mathcal{A}^+:=\{$positive elements$\}$ = 
   $\{$elements that are positive Laurent polynomials %when expanded
  with respect to every cluster$\}$.
   
@@ -459,7 +461,7 @@ e.g. $a^{5}be^2$ is a cluster monomial if $\{a,b,c,d,e \}$ is a cluster.
  }
  \note[width=18.5cm, angle=-25,%connection, 
  targetoffsety=-0.5cm,targetoffsetx=2cm]{%If $\mathcal{A}$ comes from a surface, 
- A cluster monomial corresponds to a multi-tagged dissection D (\textit{i.e.} a partial tagged triangulation allowing multiple copies of tagged arcs).}
+ A cluster monomial corresponds to a multi-tagged dissection (\textit{i.e.} a partial tagged triangulation allowing multiple copies of tagged arcs).}
 \column{0.55}
 
 \block{Result 2: %combinatorial 
@@ -494,7 +496,8 @@ inspired by work on types $A$ and $\widetilde{A}$ by {[Dupont and Thomas, 2011]}
 
 \block{Atomic bases for other surfaces}
 {\begin{multicols*}{2}
-\innerblock{Conjecture (Fomin, Shapiro, and Thurston, 2008, unpublished, based on Fock and Goncharov, 2006)}{
+\innerblock{Conjecture (Fomin, Shapiro, and Thurston, 2008, unpublished, \\
+based on Fock and Goncharov, 2006)}{
 A candidate for atomic bases:
 the \emph{``bracelets collection"} consisting of all cluster monomials %plus
 $+$ a class of elements.
