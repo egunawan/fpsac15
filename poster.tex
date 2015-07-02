@@ -1,7 +1,13 @@
-\documentclass[a0paper, portrait, 17pt]{tikzposter}
+%\documentclass[a0paper, portrait, 17pt]{tikzposter}
 %12pt, 14pt, 17pt, 20pt, or 25pt;
 %[25pt, a0paper, portrait, margin=0mm, innermargin=15mm,
  %    blockverticalspace=15mm, colspace=15mm, subcolspace=8mm]
+
+\documentclass[blockverticalspace=0.2cm,colspace=0.2cm,
+%titletotopverticalspace=0.1cm, titletoblockverticalspace=0.1cm,
+a0paper, portrait, 20pt]{tikzposter}
+
+
 
 %for IMA
 %You can bring your poster (40 inches (101 cm) high by 30 inches (76 cm) wide)
@@ -63,8 +69,12 @@
 %%%%% shortcuts %%%%%
 %%%%%%%%%%%%%%%
 
-\title{Atomic Bases and $T$-path Formula for Cluster Algebras of Type $D$} \author{Emily Gunawan* and Gregg Musiker} 
-\institute{University of Minnesota, School of Mathematics, Minneapolis, USA}
+ \settitle{ \centering \vbox{ %    \@titlegraphic \\[\TP@titlegraphictotitledistance] 
+ \centering     \color{titlefgcolor} {\bfseries \Huge \sc \@title \par}     \vspace*{1em}     {\huge \@author \par} %\vspace*{1em} 
+ %{\LARGE \@institute}}}
+
+\title{Atomic Bases and $T$-path Formula for Cluster Algebras of Type $D$} \author{Emily Gunawan* and Gregg Musiker - University of Minnesota, Minneapolis, USA} 
+%\institute{University of Minnesota, School of Mathematics, Minneapolis, USA}
 
 %\titlegraphic{\includegraphics{logo}}
 
@@ -263,11 +273,11 @@ This example corresponds to \\
 
 \begin{columns}
 \column{0.55}
-\block{Result 1: $T$-path formula for cluster variables for type $D$ cluster algebras}
+\block{Result 1: $T$-path formula for cluster variables (type $D$)}
 {
 %\coloredbox{
-We extend Schiffler - Thomas' $T$-path definition and formula for unpunctured surfaces (2009). 
-Let $T^o$ be an ideal triangulation (of an unpunctured surface or a once-punctured disk) and let $\ga$ be an arc that crosses $T^o$.
+We extend Schiffler and Thomas' $T$-path definition and formula for unpunctured surfaces (2009). 
+Let $T^o$ be an ideal triangulation (of an unpunctured surface or a $1$-punctured disk) and $\ga$ an arc that crosses $T^o$.
 Let $\blacktri{k}$ denote the $k$-th ideal triangle crossed by $\ga$.
 %We expect to generalize this to other punctured surfaces.
 %}
@@ -276,7 +286,7 @@ Let $\blacktri{k}$ denote the $k$-th ideal triangle crossed by $\ga$.
 \innerblock{Definition: quasi-arc}{
 If $\tau$ is an ordinary arc,
 let an associated \emph{quasi-arc} $\tau'$ be a curve (not passing through the puncture $\puncture$) which agrees with $\tau$ outside of a small radius-$\epsilon$ disk $D_\epsilon$ around $\puncture$.
-If $\tau$ is not adjacent to the puncture, let the associated quasi-arc be $\tau$ itself. 
+%If $\tau$ is not adjacent to the puncture, let the associated quasi-arc be $\tau$ itself. 
 %If $\tau$ is an ordinary radius of $\Cn$ between a marked point $v$ on the boundary and the puncture $\puncture$,
 %let an associated \emph{quasi-arc} $\tau'$ be a curve (not passing through $\puncture$) which agrees with $\tau$ outside of a radius-$\epsilon$ disk $D_\epsilon$ around $\puncture$, where $\epsilon$ is chosen small enough so that the intersection of $\tau$ with any other arc is outside of $D_\epsilon$.
 %Otherwise, we let the associated quasi-arc be $\tau$ itself.
@@ -339,8 +349,8 @@ in the variables corresponding to $T^o$ is
 $$x_\gamma = \sum_\om x(\om)$$%}
 over all $(T^o,\gamma)$-paths $\om = (\om_1, \dots, \om_{2d+1})$,
 where 
-$$x(\om) := \left( {\prod_{i\text{ odd}} x_{\om_i}} \right) 
-\left({\prod_{i\text{ even}} x_{\om_i}}^{-1}\right).$$
+$x(\om) := \left( {\prod_{i\text{ odd}} x_{\om_i}} \right) 
+\left({\prod_{i\text{ even}} x_{\om_i}}^{-1}\right).$
 %\end{theorem}
 }}
 %\note[targetoffsetx=4cm, targetoffsety=3cm, width=16cm]{We expect to generalize this to other punctured surfaces.}
@@ -364,15 +374,12 @@ All \emph{backtracks} $(\underline{2,2})$ and $(\underline{\ell,\ell})$ have bee
 \TikzTpathSeven{\TikzFourTpathsSize}{\TpathCompleteSevenDollar}
 \TikzTpathEight{\TikzFourTpathsSize}{\TpathCompleteEightDollar}
 \TikzTpathNine{\TikzFourTpathsSize}{\TpathCompleteNineDollar}
-\end{tikzfigure}
+%\end{tikzfigure}
 
-\begin{tikzfigure}
-[The four $(T^o,\ga)$-paths of the ideal triangulation $T^o$ and the $\ell$-loop $\ga$ of the first figure.]
-\label{fig:TikzNooseGammaIdealTriangulation}
-%Figure \ref{fig:TikzNooseGammaIdealTriangulation}.
-%Each path contains a quasi-backtrack $(\overline{1,1})$, $(\overline{2,2})$, or $(\overline{3,3})$]
-%\mbox{
-%\subfigure[An $\ell$-loop $\ga$ of $\Cnn{4}$ which crosses $T^o$ $3$ times.]{
+%\begin{tikzfigure}
+%[The four $(T^o,\ga)$-paths of the ideal triangulation $T^o$ and the $\ell$-loop $\ga$ of the first figure.]
+%\label{fig:TikzNooseGammaIdealTriangulation}
+
 \TikzNooseGammaIdealTriangulation{1.5*\TikzNooseTpathsSize}
 %\label{fig:TikzNooseGammaIdealTriangulation}
 \TikzNooseTpathOne{\TikzNooseTpathsSize}{$(b_1,1,\overline{2,2},\overline{3,3},\tau)$}
@@ -403,7 +410,8 @@ All \emph{backtracks} $(\underline{2,2})$ and $(\underline{\ell,\ell})$ have bee
 \end{tikzfigure}
 
 \begin{tikzfigure}[Examples of \emph{non}-$(T^o,\ga)$-paths for the situations in Figures \ref{fig:T2_triangulated_polygon_original}, \ref{fig:TikzNooseGammaIdealTriangulation}, and \ref{fig:TikzNotNooseGammaIdealTriangulation}.
-Each path is homotopic to $\ga$ and satisfies (T1) but fails (T2) or (T3).
+Either (T2) or (T3) is not satisfied.
+%Each path is homotopic to $\ga$ and satisfies (T1) but fails (T2) or (T3).
 ]
 %\mbox{
 %\subfigure[A path with the same labels {\tiny\TpathCompleteSixDollar} as Figure \ref{fig:path_six}
