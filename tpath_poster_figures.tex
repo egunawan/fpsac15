@@ -4407,27 +4407,25 @@ node[pos=0.05, below]{$\ga$};
 
 %  \path[every node/.style={font=\sffamily\small}]
 
-\draw [<->,>=stealth',shorten >=35pt,shorten <=35pt,  ultra thick]
+\draw [<->,>=stealth',shorten >=35pt,shorten <=35pt, thick]
 (north) edge node[right] {} (belownorth)
     (south) edge (abovesouth);
 
-\draw [<->,>=stealth',shorten >=45pt,shorten <=45pt,
-%auto,node distance=4cm,
-  ultra thick]
+\draw [<->,>=stealth',shorten >=45pt,shorten <=45pt, thick]
 (belownorth) edge (leftdiamondNorth) (belownorth) edge (rightdiamondNorth)
      (leftdiamondNorth) edge [bend right] (leftdiamondWest) (rightdiamondNorth) edge [bend right] (rightdiamondWest)
      (leftdiamondNorth) edge [bend left] (leftdiamondEast) (rightdiamondNorth) edge [bend left] (rightdiamondEast);
      
-       \draw [<->,>=stealth',shorten >=32pt,shorten <=32pt,  ultra thick]  
+       \draw [<->,>=stealth',shorten >=32pt,shorten <=32pt,   thick]  
      (leftdiamondSouth) edge [bend right] (leftdiamondEast)  (rightdiamondSouth) edge [bend right] (rightdiamondEast)
     (leftdiamondSouth) edge [bend left] (leftdiamondWest)  (rightdiamondSouth) edge [bend left] (rightdiamondWest);
     
-  \draw [<->,>=stealth',shorten >=43pt,shorten <=43pt,  ultra thick]  
+  \draw [<->,>=stealth',shorten >=43pt,shorten <=43pt,   thick]  
         (abovesouth) edge (leftdiamondSouth) (abovesouth) edge (rightdiamondSouth);
     
    \draw [<->,>=stealth',shorten >=35pt,shorten <=35pt,
 %auto,node distance=4cm,
-  ultra thick]
+   thick]
     (leftdiamondEast) edge (rightdiamondWest)
         (west) edge (leftdiamondWest)
     (east) edge (rightdiamondEast);
@@ -4435,7 +4433,7 @@ node[pos=0.05, below]{$\ga$};
     
    \draw [<->,>=stealth',shorten >=45pt,shorten <=45pt,
 %auto,node distance=4cm,
-  ultra thick]
+   thick]
     (north) edge[bend right] node[sloped,below] {} (west)
      (north) edge[bend left] node[sloped,below] {}  (east)
     (south) edge[bend left] (west) (south) edge[bend right] (east);
