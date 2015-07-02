@@ -27,15 +27,6 @@ a0paper, portrait, 20pt]{tikzposter}
 %\usepackage{amsthm}
 \usepackage{enumerate} % To use roman numerals in enumerate
 
-%\usepackage{capt-of} % to do \captionof
-%\usepackage[labelfont=bf]{caption}
-%\usepackage{subcaption}
-%\usepackage[margin=10pt,font=small,labelfont=bf]{caption}
-\usepackage{wrapfig}%,kantlipsum}
-
-%\usepackage{filecontents}% http://ctan.org/pkg/filecontents
-\usepackage{lipsum}% http://ctan.org/pkg/lipsum
-\usepackage{adjustbox} % to use minipage
 \usepackage{multicol}
 
 \usepackage[backend=bibtex,style=numeric,sorting=none]{biblatex} % to use .bib file
@@ -85,9 +76,9 @@ a0paper, portrait, 20pt]{tikzposter}
 %%%%% shortcuts %%%%%
 %%%%%%%%%%%%%%%
 
- \settitle{ \centering \vbox{ %    \@titlegraphic \\[\TP@titlegraphictotitledistance] 
- \centering     \color{titlefgcolor} {\bfseries \Huge \sc \@title \par}     \vspace*{1em}     {\huge \@author \par} %\vspace*{1em} 
- %{\LARGE \@institute}}}
+% \settitle{ \centering \vbox{%     \@titlegraphic \\[\TP@titlegraphictotitledistance] 
+% \centering%     \color{titlefgcolor} {\bfseries \Huge \sc \@title \par}%     \vspace*{1em}%     {\huge \@author \par} %\vspace*{1em} 
+% %{\LARGE \@institute}%}}
 
 \title{Atomic Bases and $T$-path Formula for Cluster Algebras of Type $D$} \author{Emily Gunawan* and Gregg Musiker - University of Minnesota, Minneapolis, USA} 
 %\institute{University of Minnesota, School of Mathematics, Minneapolis, USA}
@@ -98,7 +89,7 @@ a0paper, portrait, 20pt]{tikzposter}
 %\bibliography{references}
 
 
-\begin{document} \maketitle
+\begin{document} \maketitle[titletoblockverticalspace=-0.6cm]
 \begin{columns}
 \column{0.65}
 %
@@ -211,7 +202,7 @@ marked points on the boundary:
 \end{align*}
 }
 }
-\note[width=10cm, targetoffsetx=0.07\textwidth,targetoffsety=-7.5cm,innersep=.2cm,angle=0,connection]{
+\note[width=10cm, targetoffsetx=0.1\textwidth,targetoffsety=-9cm,innersep=.2cm,angle=0,connection]{
 \TikzTwoRectanglesFlipsAndThreeDigonsFlips{0.5}
 }
 \column{0.35}
@@ -250,7 +241,7 @@ A tagged triangulation of a once-punctured square $\longleftrightarrow$ A quiver
 %\text{\small $r^{\bowtie}$} & 0 & -1 & 0 & 0}\end{math}};
 %\end{tikzpicture} 
 }
-\note[width=9cm,targetoffsetx=1.5cm,targetoffsety=-1cm,innersep=.5cm,connection]{
+\note[width=10cm,targetoffsetx=1cm,targetoffsety=-1.5cm,innersep=.4cm,connection]{
 This example corresponds to \\
   \begin{math}
   B = \bordermatrix{
@@ -370,9 +361,8 @@ $x(\om) := \left( {\prod_{i\text{ odd}} x_{\om_i}} \right)
 \left({\prod_{i\text{ even}} x_{\om_i}}^{-1}\right).$
 %\end{theorem}
 }}
-%\note[targetoffsetx=4cm, targetoffsety=3cm, width=16cm]{We expect to generalize this to other punctured surfaces.}
-\note[targetoffsetx=18cm, targetoffsety=-0.5cm, innersep=1cm,connection, width=4cm]{new}
-\note[width=10cm,targetoffsetx=7cm, targetoffsety=-3cm, innersep=1cm,angle=-20,connection]
+\note[targetoffsetx=7cm, targetoffsety=-3.5cm, innersep=1cm,angle=-7,connection, width=4cm]{new}
+\note[width=10cm,targetoffsetx=7cm, targetoffsety=-5.9cm, innersep=1cm,angle=-20,connection]
 {We expect to generalize this to other punctured surfaces.}
 
 \column{0.45}
@@ -449,8 +439,8 @@ Either (T2) or (T3) is not satisfied.
 %\label{fig:non_tpaths}
 %\end{figure}}
 }
-\note[targetoffsetx=-22cm, targetoffsety=-7cm, width=5.5cm]
-{The $T$-paths are in \mbox{natural} bijection with Musiker, Schiffler, and Williams' snake graph matchings.}
+\note[targetoffsetx=-23cm, targetoffsety=-5cm, width=6cm]
+{The \mbox{$T$-paths} are in \mbox{natural} \mbox{bijection} with Musiker, \mbox{Schiffler}, and Williams' snake graph matchings.}
 %\note[targetoffsetx=7cm, targetoffsety=-7cm, width=5.5cm]{Steps are not drawn exactly along the arcs/boundary edges for \mbox{illustration} purposes.}
 \end{columns}
 
@@ -524,8 +514,8 @@ inspired by work on types $A$ and $\widetilde{A}$ by {[Dupont and Thomas, 2011]}
 %\end{remark}
 %}
 }
-\note[width=18.5cm, angle=-25,%connection, 
- targetoffsety=-0.5cm,targetoffsetx=2cm]{%If $\mathcal{A}$ comes from a surface, 
+\note[width=12cm, angle=-15,connection, 
+ targetoffsety=3.5cm,targetoffsetx=8cm]{%If $\mathcal{A}$ comes from a surface, 
  A cluster monomial corresponds to a multi-tagged dissection (\textit{i.e.} a partial tagged triangulation allowing multiple copies of tagged arcs).}
 
 
@@ -590,17 +580,17 @@ Type $\tilD_{n-1}$ cluster algebras ($(n-3)$-gons with $2$ punctures), \textit{e
 }
 \end{multicols*}
 }
-\note[targetoffsetx=-19cm, targetoffsety=0.1cm, innersep=0cm, width=4cm,angle=-10,connection]
+\note[targetoffsetx=-6cm, targetoffsety=-0.8cm, innersep=0cm, width=4cm,angle=-10,radius=4cm,connection]
 {
 \TikzBraceletExample{0.85}
 }
 %\item A version of the $T$-path formula for tagged triangulations.
 
-\note[targetoffsetx=33.5cm,targetoffsety=2.5cm, width=17.5cm,innersep=1cm]{
+\note[targetoffsetx=33cm,targetoffsety=2cm, width=16cm,innersep=1cm]{
 %We would like to thank Pasha Pylyavskyy, Vic Reiner, and Peter Webb for looking over an early version of this paper, Hugh Thomas for helpful discussions, and the referees for many useful comments. 
 \begin{enumerate}[-]
 \item The authors were supported by NSF Grants DMS-1067183 and DMS-1148634,
-and would like to thank P. Pylyavskyy, V. Reiner, H. Thomas, and P. Webb.
+and would like to thank P. Pylyavskyy, V. Reiner, \mbox{H. Thomas}, and P. Webb.
 \item Preprint arXiv:1409.3610 (2014) to appear in SIGMA.
 \item Email: egunawan@umn.edu 
 \item Home page: umn.edu/home/egunawan
