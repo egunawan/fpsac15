@@ -76,9 +76,14 @@ a0paper, portrait, 20pt]{tikzposter}
 %%%%% shortcuts %%%%%
 %%%%%%%%%%%%%%%
 
-% \settitle{ \centering \vbox{%     \@titlegraphic \\[\TP@titlegraphictotitledistance] 
-% \centering%     \color{titlefgcolor} {\bfseries \Huge \sc \@title \par}%     \vspace*{1em}%     {\huge \@author \par} %\vspace*{1em} 
-% %{\LARGE \@institute}%}}
+% \settitle{ \centering \vbox{
+%     \@titlegraphic \\[\TP@titlegraphictotitledistance] 
+% \centering
+%     \color{titlefgcolor} {\bfseries \Huge \sc \@title \par}
+%     \vspace*{1em}
+%     {\huge \@author \par} %\vspace*{1em} 
+% %{\LARGE \@institute}
+%}}
 
 \title{Atomic Bases and $T$-path Formula for Cluster Algebras of Type $D$} \author{Emily Gunawan* and Gregg Musiker - University of Minnesota, Minneapolis, USA} 
 %\institute{University of Minnesota, School of Mathematics, Minneapolis, USA}
@@ -120,7 +125,7 @@ where
 \, \text{ and }\, \mu_k(B)_{ij}=
  \begin{cases}
  - b_{ij}&\text{if $k=i$ or $k=j$} \\
- b_{ij} + \frac{1}{2} \left(b_{ik}|b_{kj}|+b_{ik}|b_{kj}|\right) &\text{otherwise}
+ b_{ij} + \frac{1}{2} \left(|b_{ik}|b_{kj}+b_{ik}|b_{kj}|\right) &\text{otherwise}
 %b_{ij} + b_{ik}b_{kj} &\text{if $b_{ik}>0$ and $b_{kj}>0$}\\
 %b_{ij} - b_{ik}b_{kj} &\text{if $b_{ik}<0$ and $b_{kj}<0$}\\
 %b_{ij} &\text{otherwise}
